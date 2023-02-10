@@ -1,17 +1,15 @@
 import dynamic from "next/dynamic";
+import React from "react";
 
-const Box = dynamic(() => import("@mui/material/Box"));
+const Layout = dynamic(() => import("@/components/layout/Layout"));
 const Typography = dynamic(() => import("@mui/material/Typography"));
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
-    <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      height="100vh"
-    >
+    <Layout>
       <Typography>Test</Typography>
-    </Box>
+    </Layout>
   );
-}
+};
+
+export default Home;
