@@ -3,7 +3,7 @@ import GlobalStyles from "@mui/material/GlobalStyles";
 const GlobalCustomStyle = () => (
   <GlobalStyles
     styles={{
-      body: { margin: 0, padding: 0, height: "100vh", overflow: "hidden" },
+      body: { margin: 0, padding: 0 },
       img: {
         maxWidth: "100%",
       },
@@ -14,10 +14,6 @@ const GlobalCustomStyle = () => (
       },
       a: {
         textDecoration: "none",
-      },
-      "#__next": {
-        height: "100vh",
-        overflow: "hidden",
       },
     }}
   />

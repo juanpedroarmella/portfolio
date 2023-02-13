@@ -6,16 +6,15 @@ const CenterContainer = dynamic(
   () => import("@/components/atoms/CenterContainer")
 );
 const Header = dynamic(() => import("@/components/layout/header/Header"));
+const Footer = dynamic(() => import("@/components/layout/footer/Footer"));
 
 const LayoutWrapper = styled("div")`
   display: grid;
   grid-template-rows: auto 1fr auto;
-  overflow: hidden;
-  height: 100vh;
 `;
 
 const LayoutContent = styled(CenterContainer)({
-  height: "100vh",
+  minHeight: "100vh",
 });
 
 interface LayoutProps {
@@ -28,6 +27,7 @@ const Layout: React.FC<LayoutProps> = (props) => {
     <LayoutWrapper>
       <Header />
       <LayoutContent>{children}</LayoutContent>
+      <Footer />
     </LayoutWrapper>
   );
 };
