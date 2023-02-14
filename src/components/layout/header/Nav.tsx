@@ -9,11 +9,20 @@ const Container = styled("nav")`
   gap: 1rem;
 `;
 
+interface NavigationButtonsProps {
+  href: string;
+  text: string;
+}
+
+const NavigationButton: React.FC<NavigationButtonsProps> = (props) => {
+  return <LinkButton {...props} buttonProps={{ variant: "text" }} />;
+};
+
 const Nav = () => {
   return (
     <Container>
-      <LinkButton href="/cv" text="Cv" />
-      <LinkButton href="/contact" text="Contact" />
+      <NavigationButton href="/cv" text="Cv" />
+      <NavigationButton href="/contact" text="Contact" />
     </Container>
   );
 };

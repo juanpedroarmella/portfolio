@@ -2,8 +2,8 @@ import dynamic from "next/dynamic";
 
 const Typography = dynamic(() => import("@mui/material/Typography"));
 
-const Home: React.FC = () => {
-  return <Typography>Home</Typography>;
+const Contact: React.FC = () => {
+  return <Typography>Contact</Typography>;
 };
 
-export default Home;
+export default Contact;
