@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import dynamic from "next/dynamic";
+import useTranslation from "next-translate/useTranslation";
 
 const LinkButton = dynamic(() => import("@/components/atoms/LinkButton"));
 
@@ -19,10 +20,11 @@ const NavigationButton: React.FC<NavigationButtonsProps> = (props) => {
 };
 
 const Nav = () => {
+  const { t } = useTranslation("common");
   return (
     <Container>
-      <NavigationButton href="/cv" text="Cv" />
-      <NavigationButton href="/contact" text="Contact" />
+      <NavigationButton href="/cv" text={t("nav-cv")} />
+      <NavigationButton href="/contact" text={t("nav-contact")} />
     </Container>
   );
 };

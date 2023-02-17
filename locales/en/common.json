@@ -1,4 +1,7 @@
 {
-  "title": "Hello world",
-  "variable-example": "Using a variable {{count}}"
+  "language-name-en": "English",
+  "language-name-es": "Spanish",
+  "language": "Language",
+  "nav-cv": "CV",
+  "nav-contact": "Contact"
 }
