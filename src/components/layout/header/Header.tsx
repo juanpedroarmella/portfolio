@@ -3,9 +3,8 @@ import dynamic from "next/dynamic";
 
 const Nav = dynamic(() => import("@/components/layout/header/Nav"));
 const Logo = dynamic(() => import("@/components/layout/header/Logo"));
-const SelectLanguage = dynamic(
-  () => import("@/components/translate/SelectLanguage")
-);
+
+const Settings = dynamic(() => import("@/components/settings/Settings"));
 
 const HeaderWrapper = styled("header")`
   position: fixed;
@@ -22,8 +21,9 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <Logo />
-      <SelectLanguage />
+     
       <Nav />
+      <Settings />
     </HeaderWrapper>
   );
 };
