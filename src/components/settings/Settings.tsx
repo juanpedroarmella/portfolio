@@ -1,16 +1,15 @@
 import dynamic from "next/dynamic";
+import SelectLanguage from "../translate/SelectLanguage";
 
 const IconButton = dynamic(() => import("@mui/material/IconButton"));
 const SettingsIcon = dynamic(() => import("@mui/icons-material/Settings"));
-const Tooltip = dynamic(() => import("@/components/atoms/Tooltip"));
-const SelectLanguage = dynamic(
-  () => import("@/components/translate/SelectLanguage")
-);
+const DialogMenu = dynamic(() => import("@/components/atoms/DialogMenu"));
+
 
 
 const Settings = () => {
   return (
-    <Tooltip
+    <DialogMenu
       ActivateTooltipButton={
         <IconButton>
           <SettingsIcon />
@@ -18,7 +17,7 @@ const Settings = () => {
       }
     >
       <SelectLanguage />
-    </Tooltip>
+    </DialogMenu>
   );
 };
 

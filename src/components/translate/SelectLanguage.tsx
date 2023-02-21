@@ -2,13 +2,8 @@ import React from "react";
 import useTranslation from "next-translate/useTranslation";
 import i18nConfig from "root/i18n.json";
 import setLanguage from "next-translate/setLanguage";
-import dynamic from "next/dynamic";
-import { SelectChangeEvent } from "@mui/material";
+import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from "@mui/material";
 
-const FormControl = dynamic(() => import("@mui/material/FormControl"));
-const InputLabel = dynamic(() => import("@mui/material/InputLabel"));
-const Select = dynamic(() => import("@mui/material/Select"));
-const MenuItem = dynamic(() => import("@mui/material/MenuItem"));
 
 const { locales } = i18nConfig;
 
@@ -22,7 +17,7 @@ const SelectLanguage = () => {
     []
   );
   return (
-    <FormControl fullWidth>
+    <FormControl >
       <InputLabel>{t(`language`)}</InputLabel>
       <Select label={t(`language`)} value={lang} onChange={handleChange}>
         {locales.map((lng) => {
