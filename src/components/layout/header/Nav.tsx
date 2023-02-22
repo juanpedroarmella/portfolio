@@ -16,7 +16,7 @@ interface NavigationButtonsProps {
 }
 
 const NavigationButton: React.FC<NavigationButtonsProps> = (props) => {
-  return <LinkButton {...props} buttonProps={{ variant: "text" }} />;
+  return <LinkButton {...props} buttonProps={{ variant: "outlined" }} />;
 };
 
 const Nav = () => {

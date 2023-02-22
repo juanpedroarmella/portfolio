@@ -7,8 +7,9 @@ const FooterWrapper = styled("footer")`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  border-top: 1px solid black;
+  padding: 2rem;
+  border-top: 2px solid rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.4);
   height: 3rem;
 `;
 

@@ -14,14 +14,14 @@ const HeaderWrapper = styled("header")`
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
-  border-bottom: 1px solid black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 `;
 
 const Header = () => {
   return (
     <HeaderWrapper>
       <Logo />
-     
       <Nav />
       <Settings />
     </HeaderWrapper>
