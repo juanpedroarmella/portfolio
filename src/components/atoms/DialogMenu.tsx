@@ -32,7 +32,12 @@ const DialogMenu: React.FC<DialogMenuProps> = (props) => {
         React.cloneElement(ActivateTooltipButton, {
           onClick: handleClick,
         })}
-      <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
+      <Menu
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        disableScrollLock
+      >
         <Box px={2} py={1}>
           {children}
         </Box>

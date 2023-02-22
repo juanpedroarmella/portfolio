@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import dynamic from "next/dynamic";
 import useTranslation from "next-translate/useTranslation";
+import { useRouter } from "next/router";
 
 const LinkButton = dynamic(() => import("@/components/atoms/LinkButton"));
 
@@ -16,7 +17,16 @@ interface NavigationButtonsProps {
 }
 
 const NavigationButton: React.FC<NavigationButtonsProps> = (props) => {
-  return <LinkButton {...props} buttonProps={{ variant: "outlined" }} />;
+  const router = useRouter();
+  const { pathname } = router;
+  return (
+    <LinkButton
+      {...props}
+      buttonProps={{
+        variant: props.href === pathname ? "contained" : "outlined",
+      }}
+    />
+  );
 };
 
 const Nav = () => {

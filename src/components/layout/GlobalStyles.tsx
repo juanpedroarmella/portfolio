@@ -3,7 +3,7 @@ import GlobalStyles from "@mui/material/GlobalStyles";
 const GlobalCustomStyle = () => (
   <GlobalStyles
     styles={{
-      body: { margin: 0, padding: 0, overflowY: "scroll !important" },
+      body: { margin: 0, padding: 0 },
       img: {
         maxWidth: "100%",
       },
