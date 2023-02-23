@@ -5,6 +5,7 @@
     "*": ["common"],
     "/": ["home"],
     "/contact": ["contact"],
-    "/cv": ["cv"]
+    "/cv": ["cv"],
+    "/proyects": ["proyects"]
   }
 }

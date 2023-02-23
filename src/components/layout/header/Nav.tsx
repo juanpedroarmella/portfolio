@@ -34,6 +34,7 @@ const Nav = () => {
   return (
     <Container>
       <NavigationButton href="/cv" text={t("nav-cv")} />
+      <NavigationButton href="/proyects" text={t("nav-proyects")} />
       <NavigationButton href="/contact" text={t("nav-contact")} />
     </Container>
   );
