@@ -1,11 +1,24 @@
-import useTranslation from "next-translate/useTranslation";
 import dynamic from "next/dynamic";
 
-const Typography = dynamic(() => import("@mui/material/Typography"));
+const CenterContainer = dynamic(
+  () => import("@/components/atoms/CenterContainer")
+);
+const MainTitle = dynamic(() => import("@/components/tenant/cv/MainTitle"));
 
 const Cv: React.FC = () => {
-  const { t } = useTranslation("cv");
-  return <Typography>{t("title")}</Typography>;
+  return (
+    <CenterContainer direction="column">
+      <MainTitle />
+      {/*
+        <AboutMe />
+        <Experience />
+        <Education />
+        <Knowledge />
+        <OtherSkills />
+        <Languages />
+      */}
+    </CenterContainer>
+  );
 };
 
 export default Cv;
