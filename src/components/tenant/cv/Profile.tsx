@@ -1,16 +1,20 @@
 import { Typography } from "@mui/material";
-import useTranslation from "next-translate/useTranslation";
+import { Translate } from "next-translate";
 import dynamic from "next/dynamic";
 
-const Box = dynamic(() => import("@mui/material/Box"));
+const GridBox = dynamic(() => import("@/components/atoms/GridBox"));
 
-const Profile: React.FC = () => {
-  const { t } = useTranslation("cv");
+interface ProfileProps {
+  t: Translate;
+}
+
+const Profile: React.FC<ProfileProps> = (props) => {
+  const { t } = props;
   return (
-    <Box display="grid" gap={2} width='100%'>
-      <Typography variant="h3">{t("profile-title")}</Typography>
-      <Typography variant="body1">{t("profile-text")}</Typography>
-    </Box>
+    <GridBox gap={2} width="100%">
+      <Typography variant="h3">{props.t("profile.title")}</Typography>
+      <Typography variant="body1">{props.t("profile.text")}</Typography>
+    </GridBox>
   );
 };
 export default Profile;

@@ -12,6 +12,7 @@ const LayoutContent = styled(CenterContainer)({
   maxWidth: "85vw",
   minHeight: "100vh",
   marginTop: "3.5rem",
+  padding: "5rem",
 });
 
 interface LayoutProps {

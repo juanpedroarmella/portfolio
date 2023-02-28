@@ -1,5 +1,26 @@
 {
   "title": "Cv",
-  "profile-title": "Perfil Personal",
-  "profile-text": "Soy un desarrollador Full-stackespecializado en Front-end, conexperiencia en frameworks de JavaScripttales como React, NextJs y Vue.Poseo experiencia desarrollandosoluciones web3."
+  "profile": {
+    "title": "Perfil Personal",
+    "text": "Soy un desarrollador Full-stack especializado en Front-end, con experiencia en frameworks de JavaScript tales como React, NextJs y Vue.Poseo experiencia desarrollando soluciones web3."
+  },
+  "experience": {
+    "title": "Experiencia",
+    "company": "STARTUP EULER TOOLS SOLUTIONS (ESPAÑA) | 1 AÑO",
+    "position": "FRONT-END DEVELOPER",
+    "description": "Posición como desarrollador frontend a cargo de implementar aplicaciones web3 en diferentes tecnologías (React, NextJs, Vue).",
+    "tasks": {
+      "title": "Las tareas principales incluyen:",
+      "list": [
+        "Desarrollo de nuevas funcionalidades en aplicaciones web3.",
+        "Mostrar y modificar datos de criptomonedas a través de servicios REST.",
+        "Diseño e implementación de componentes de interfaz de usuario que interactúen con la blockchain y smart contracts.",
+        "Documentación de componentes.",
+        "Ayudar al análisis y aportar posibles soluciones a la hora de desarrollar nuevas funcionalidades.",
+        "Ayudar a los nuevos miembros del equipo en el onboarding, con respecto a la base de código y al despliegue local.",
+        "Despliegue e integración continua de aplicaciones web utilizando servicios como Vercel o AWS.",
+        "Desarrollo con renderizado del lado del servidor y optimización SEO."
+      ]
+    }
+  }
 }

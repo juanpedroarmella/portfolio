@@ -1,21 +1,35 @@
 import { Typography } from "@mui/material";
+import { Translate } from "next-translate";
 import dynamic from "next/dynamic";
+import React from "react";
 
-const Box = dynamic(() => import("@mui/material/Box"));
+const GridBox = dynamic(() => import("@/components/atoms/GridBox"));
 
-const Experience: React.FC = () => {
+interface ExperienceProps {
+  t: Translate;
+}
+
+const Experience: React.FC<ExperienceProps> = (props) => {
+  const { t } = props;
+  const arrTasks = React.useMemo(
+    () => t("experience.tasks.list", {}, { returnObjects: true }) as [],
+    [t]
+  );
   return (
-    <Box display="grid" gap={2}>
-      <Typography variant="h3">Experience</Typography>
-      <Typography variant="h5">Company Name</Typography>
-
-      <Typography variant="body1">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia
-        beatae neque rerum veritatis omnis obcaecati velit corrupti expedita ab
-        aliquid animi excepturi sequi odio magni pariatur, explicabo distinctio
-        cum quam?
-      </Typography>
-    </Box>
+    <GridBox gap={2} width="100%">
+      <Typography variant="h3">{t("experience.title")}</Typography>
+      <Typography variant="h5">{t("experience.company")}</Typography>
+      <Typography variant="h6">{t("experience.position")}</Typography>
+      <GridBox gap={1}>
+        <Typography variant="body1">{t("experience.description")}</Typography>
+        <Typography variant="body1">{t("experience.tasks.title")}</Typography>
+        <GridBox component="ul" gap={1} m={0}>
+          {arrTasks.map((task: string, index: number) => (
+            <li key={index}>{task}</li>
+          ))}
+        </GridBox>
+      </GridBox>
+    </GridBox>
   );
 };
 export default Experience;
