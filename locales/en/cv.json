@@ -22,5 +22,26 @@
         "Development with server-side rendering and SEO optimization."
       ]
     }
+  },
+  "education": {
+    "title": "Education",
+    "career": "UNIVERSITY TECHNICIAN IN COMPUTER APPLICATIONS DEVELOPMENT | 2020 - 2023",
+    "university": "UNIVERSIDAD NACIONAL DEL CENTRO DE LA PROVINCIA DE BUENOS AIRES | TANDIL, ARGENTINA",
+    "knowledge": {
+      "title": "Main knowledge acquired:",
+      "list": [
+        "Programming: Basic concepts, structured and object-oriented programming and notions of complexity.",
+        "Understanding and use of development methodologies. ",
+        "Verification and documentation processes. ",
+        "User interfaces: event handling, interface design concepts, computer visualization principles, usability and accessibility on different devices.",
+        "Participation in information systems development projects. ",
+        "Mathematics and propositional logic applied to computing. ",
+        "Comprehensive training, understanding the theoretical concepts within the analysis of real cases.",
+        "Ability to discuss ideas and alternatives for solving problems.  ",
+        "Ability to update on new technologies. methodologies and tools concerning the development of systems. ",
+        "Implement computer systems or sub-systems based on a description of the problem and its detailed design, following a given methodology.",
+        "Apply methodological practices to manage the quality of a computer system. "
+      ]
+    }
   }
 }

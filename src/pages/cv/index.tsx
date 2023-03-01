@@ -7,6 +7,7 @@ const CenterContainer = dynamic(
 const MainTitle = dynamic(() => import("@/components/tenant/cv/MainTitle"));
 const Profile = dynamic(() => import("@/components/tenant/cv/Profile"));
 const Experience = dynamic(() => import("@/components/tenant/cv/Experience"));
+const Education = dynamic(() => import("@/components/tenant/cv/Education"));
 const GridBox = dynamic(() => import("@/components/atoms/GridBox"));
 
 const Cv: React.FC = () => {
@@ -17,8 +18,8 @@ const Cv: React.FC = () => {
       <GridBox gap={5}>
         <Profile t={t} />
         <Experience t={t} />
-        {/*<Education />
-        <Knowledge />
+        <Education t={t}/>
+        {/*<Knowledge />
         <OtherSkills />
         <Languages />
       */}

@@ -22,5 +22,27 @@
         "Desarrollo con renderizado del lado del servidor y optimización SEO."
       ]
     }
+  },
+  "education": {
+    "title": "Educación",
+    "career": "TECNICATURA UNIVERSITARIA EN DESARROLLO DE APLICACIONES INFORMATICAS | 2020 - 2023",
+    "university": "UNIVERSIDAD NACIONAL DEL CENTRO DE LA PROVINCIA DE BUENOS AIRES | TANDIL, ARGENTINA",
+    "knowledge": {
+      "title": "Principales conocimientos adquiridos:",
+      "list": [
+        "Programación: Conceptos básicos, programación estructurada y orientada a objetos y nociones de complejidad.",
+        "Estructuras de datos.",
+        "Comprensión y uso de metodologías de desarrollo.",
+        "Procesos de verificación y documentación.",
+        "Interfaces de usuario: manejo de eventos, conceptos de diseño de interfaces, principios de visualización en computadora, usabilidad y accesibilidad en distintos dispositivos.",
+        "Participación en proyectos de desarrollo de sistemas de información.",
+        "Matemática y lógica proposicional aplicada a la computación.",
+        "Formación integral, entendiendo los conceptos teóricos dentro del análisis de casos reales.",
+        "Capacidad para discutir ideas y alternativas para la solución de problemas.",
+        "Capacidad de actualizarse en las nuevas tecnologías. metodologías y herramientas concernientes al desarrollo de sistemas.",
+        "Implementar sistemas o sub-sistemas informáticos a partir de una descripción del problema y su diseño detallado, siguiendo una metodología dada.",
+        "Aplicar prácticas metodológicas para administrar la calidad de un sistema informático."
+      ]
+    }
   }
 }
