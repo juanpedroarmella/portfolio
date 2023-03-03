@@ -1,4 +1,4 @@
-import capitalize from "@mui/material/utils/capitalize";
+import { capitalize } from "@mui/material/utils";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 
