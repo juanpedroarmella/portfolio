@@ -8,7 +8,7 @@ const MainTitle = dynamic(() => import("@/components/tenant/cv/MainTitle"));
 const Profile = dynamic(() => import("@/components/tenant/cv/Profile"));
 const Experience = dynamic(() => import("@/components/tenant/cv/Experience"));
 const Education = dynamic(() => import("@/components/tenant/cv/Education"));
-const Knowledge = dynamic(() => import("@/components/tenant/cv/Knowledge"));
+const Technologies = dynamic(() => import("@/components/tenant/cv/Technologies"));
 
 const GridBox = dynamic(() => import("@/components/atoms/GridBox"));
 
@@ -21,7 +21,7 @@ const Cv: React.FC = () => {
         <Profile t={t} />
         <Experience t={t} />
         <Education t={t} />
-        <Knowledge />
+        <Technologies t={t} />
         {/*<OtherSkills />
         <Languages />
       */}

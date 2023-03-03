@@ -21,5 +21,15 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "webpack": {
+    "module": {
+      "rules": [
+        {
+          "test": "/\\.(svg)$/",
+          "use": ["@svgr/webpack"]
+        }
+      ]
+    }
+  }
 }
