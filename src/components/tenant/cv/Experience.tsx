@@ -1,9 +1,16 @@
-import { Typography } from "@mui/material";
 import { Translate } from "next-translate";
 import dynamic from "next/dynamic";
 import React from "react";
 
 const GridBox = dynamic(() => import("@/components/atoms/GridBox"));
+const List = dynamic(() => import("@mui/material/List"));
+const ListItem = dynamic(() => import("@mui/material/ListItem"));
+const Typography = dynamic(() => import("@mui/material/Typography"));
+const ListItemText = dynamic(() => import("@mui/material/ListItemText"));
+const CenterContainer = dynamic(
+  () => import("@/components/atoms/CenterContainer")
+);
+const CheckIcon = dynamic(() => import("@mui/icons-material/Check"));
 
 interface ExperienceProps {
   t: Translate;
@@ -23,11 +30,16 @@ const Experience: React.FC<ExperienceProps> = (props) => {
       <GridBox gap={1}>
         <Typography variant="body1">{t("experience.description")}</Typography>
         <Typography variant="body1">{t("experience.tasks.title")}</Typography>
-        <GridBox component="ul" gap={1} m={0}>
+        <List disablePadding>
           {arrTasks.map((task: string, index: number) => (
-            <li key={index}>{task}</li>
+            <ListItem disablePadding key={index}>
+              <CenterContainer gap={1}>
+                <CheckIcon fontSize="small" />
+                <ListItemText primary={task} />
+              </CenterContainer>
+            </ListItem>
           ))}
-        </GridBox>
+        </List>
       </GridBox>
     </GridBox>
   );

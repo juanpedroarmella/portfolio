@@ -45,5 +45,10 @@
       ]
     }
   },
-  "technologies":"Tecnologías"
+  "technologies":"Tecnologías",
+  "languages": {
+    "title": "Lenguajes",
+    "spanish": "Español",
+    "native": "Nativo"
+  }
 }
