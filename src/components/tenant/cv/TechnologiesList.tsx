@@ -1,3 +1,4 @@
+import capitalize from "@mui/material/utils/capitalize";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 
@@ -21,7 +22,7 @@ const techImages = requireTechImages
     const pathWithoutPublic = path.replace("public/", "");
     return {
       path: pathWithoutPublic,
-      name: fileName,
+      name: capitalize(fileName),
     };
   });
 
