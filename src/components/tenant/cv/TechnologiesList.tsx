@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { capitalize } from "@mui/material/utils";
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -18,20 +19,22 @@ const techImages = requireTechImages
   .keys()
   .filter((path: string) => path.startsWith("public/"))
   .map((path: string) => {
-    const fileName = path.replace(/^.*[\\/]/, "").replace(/\.[^.]+$/, "");
-    const pathWithoutPublic = path.replace("public/", "");
+    const pathWithoutLangPrefix = path.replace(`public/`, "");
+    const fileName = pathWithoutLangPrefix
+      .replace(/^.*[\\/]/, "")
+      .replace(/\.[^.]+$/, "");
     return {
-      path: pathWithoutPublic,
+      path: pathWithoutLangPrefix,
       name: capitalize(fileName),
     };
   });
 
-const Technologies: React.FC = () => {
+const TechnologiesList: React.FC = () => {
   return (
     <CenterContainer direction="row" flexWrap="wrap" gap={3}>
       {techImages.map((tech: { path: string; name: string }, index: number) => (
         <GridBox gap={1} justifyItems="center" key={index}>
-          <Image src={tech.path} alt={tech.name} width={64} height={64} />
+          <Image src={"/" + tech.path} alt={tech.name} width={64} height={64} />
           <Typography variant="h5">{tech.name}</Typography>
         </GridBox>
       ))}
@@ -39,4 +42,4 @@ const Technologies: React.FC = () => {
   );
 };
 
-export default Technologies;
+export default TechnologiesList;
