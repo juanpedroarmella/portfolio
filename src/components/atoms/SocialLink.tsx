@@ -1,7 +1,9 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 
-const FlexBox = dynamic(() => import("@/components/atoms/FlexBox"));
+const CenterContainer = dynamic(
+  () => import("@/components/atoms/CenterContainer")
+);
 const CustomLink = dynamic(() => import("@/components/atoms/CustomLink"));
 const Typography = dynamic(() => import("@mui/material/Typography"));
 
@@ -14,9 +16,9 @@ interface SocialLinkProps {
 
 const SocialLink: React.FC<SocialLinkProps> = (props) => {
   return (
-    <FlexBox alignItems="center" gap={1}>
+    <CenterContainer gap={1} flexWrap="wrap">
       <Image src={props.iconSrc} alt={props.iconAlt} width={40} height={40} />
-      <CustomLink href={props.href} target='_blank'>
+      <CustomLink href={props.href} target="_blank">
         <Typography
           variant="overline"
           color="gray"
@@ -25,7 +27,7 @@ const SocialLink: React.FC<SocialLinkProps> = (props) => {
           {props.text}
         </Typography>
       </CustomLink>
-    </FlexBox>
+    </CenterContainer>
   );
 };
 

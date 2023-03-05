@@ -2,21 +2,21 @@
   "title": "CV",
   "profile": {
     "title": "Personal Profile",
-    "text": "I am a software developer with 1 year of experience in frontend web development. I have knowledge both in the frontend area as well as in the backend. I am currently looking for a new job opportunity in the area of ​​software development."
+    "text": "I have 1 year of experience in frontend web development (React, Vue, Nextjs). I have knowledge in both frontend and backend areas. I am currently looking for a new job opportunity in the area of ​​software development."
   },
   "experience": {
     "title": "Experience",
-    "company": "STARTUP EULER TOOLS SOLUTIONS (SPAIN) | 1 YEAR",
-    "position": "FRONT-END DEVELOPER",
+    "company": "Startup Euler Tools Solutions (Spain) | 1 Year",
+    "position": "Front-end Developer",
     "description": "Position as frontend developer in charge of implementing web3 applications in different technologies (React, NextJs, Vue).",
     "tasks": {
       "title": "The main tasks include:",
       "list": [
-        "Development of new functionalities in web3 applications.",
+        "Development of new functionalities in web3 applications (oriented to the blockchain and the use of cryptoactives).",
         "Display and modify cryptocurrency data through REST services.",
         "Design and implementation of user interface components that interact with the blockchain and smart contracts.",
         "Component documentation.",
-        "Help analysis and provide possible solutions when developing new features.",
+        "Help with the requirements analysis and provide possible solutions when developing new functionalities.",
         "Assist new team members with onboarding, code base and local deployment.",
         "Deployment and continuous integration of web applications using services such as Vercel or AWS.",
         "Development with server-side rendering and SEO optimization."
@@ -25,8 +25,8 @@
   },
   "education": {
     "title": "Education",
-    "career": "UNIVERSITY TECHNICIAN IN COMPUTER APPLICATIONS DEVELOPMENT | 2020 - 2023",
-    "university": "UNIVERSIDAD NACIONAL DEL CENTRO DE LA PROVINCIA DE BUENOS AIRES | TANDIL, ARGENTINA",
+    "career": "University Technician in Computer Applications Development | 2020-2023",
+    "university": "Universidad Nacional del Centro de la Provincia de Buenos Aires | Tandil, Argentina",
     "knowledge": {
       "title": "Main knowledge acquired:",
       "list": [
@@ -40,6 +40,7 @@
         "Ability to discuss ideas and alternatives for solving problems.  ",
         "Ability to update on new technologies. methodologies and tools concerning the development of systems. ",
         "Implement computer systems or sub-systems based on a description of the problem and its detailed design, following a given methodology.",
+        "Adequately interpret the data structures and be able to define registrations, cancellations, modifications and queries to this data.",
         "Apply methodological practices to manage the quality of a computer system. "
       ]
     }

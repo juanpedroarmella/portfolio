@@ -6,13 +6,13 @@ import Box from "@mui/material/Box";
 
 interface DialogMenuProps {
   children: React.ReactNode;
-  ActivateTooltipButton: React.ReactElement<ButtonProps | IconButtonProps>;
+  ActivateDialogButton: React.ReactElement<ButtonProps | IconButtonProps>;
 }
 
 const Menu = dynamic(() => import("@mui/material/Menu"));
 
 const DialogMenu: React.FC<DialogMenuProps> = (props) => {
-  const { children, ActivateTooltipButton } = props;
+  const { children, ActivateDialogButton } = props;
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
@@ -28,8 +28,8 @@ const DialogMenu: React.FC<DialogMenuProps> = (props) => {
 
   return (
     <div>
-      {ActivateTooltipButton &&
-        React.cloneElement(ActivateTooltipButton, {
+      {ActivateDialogButton &&
+        React.cloneElement(ActivateDialogButton, {
           onClick: handleClick,
         })}
       <Menu

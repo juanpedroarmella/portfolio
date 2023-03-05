@@ -1,3 +1,4 @@
+import useIsMobile from "@/hooks/useIsMobile";
 import styled from "@emotion/styled";
 import dynamic from "next/dynamic";
 
@@ -5,10 +6,14 @@ const Nav = dynamic(() => import("@/components/layout/header/Nav"));
 const Logo = dynamic(() => import("@/components/layout/header/Logo"));
 
 const Settings = dynamic(() => import("@/components/settings/Settings"));
+const MobileHeader = dynamic(
+  () => import("@/components/layout/header/MobileHeader")
+);
 
 const HeaderWrapper = styled("header")({
   position: "fixed",
   top: 0,
+  left: 0,
   width: "100%",
   display: "flex",
   justifyContent: "space-between",
@@ -21,6 +26,10 @@ const HeaderWrapper = styled("header")({
 });
 
 const Header = () => {
+  const isMobile = useIsMobile();
+
+  if (isMobile) return <MobileHeader />;
+
   return (
     <HeaderWrapper>
       <Logo />

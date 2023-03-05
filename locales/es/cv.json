@@ -2,21 +2,21 @@
   "title": "Cv",
   "profile": {
     "title": "Perfil Personal",
-    "text": "Soy un desarrollador de software con 1 año de experiencia en el desarrollo web frontend. Poseo conocimiento tanto en el área del frontend como también en el backend. Actualmente me encuentro en la busqueda de una nueva oportunidad laboral en área del desarrollo del software."
+    "text": "Cuento con 1 año de experiencia en el desarrollo web frontend (React,Vue,Nextjs). Poseo conocimiento tanto en el área del frontend como también en el backend. Actualmente me encuentro en la busqueda de una nueva oportunidad laboral en área del desarrollo del software."
   },
   "experience": {
     "title": "Experiencia",
-    "company": "STARTUP EULER TOOLS SOLUTIONS (ESPAÑA) | 1 AÑO",
-    "position": "FRONT-END DEVELOPER",
+    "company": "Startup Euler Tools Solutions (España) | 1 Year",
+    "position": "Front-end Developer",
     "description": "Posición como desarrollador frontend a cargo de implementar aplicaciones web3 en diferentes tecnologías (React, NextJs, Vue).",
     "tasks": {
       "title": "Las tareas principales incluyen:",
       "list": [
-        "Desarrollo de nuevas funcionalidades en aplicaciones web3.",
+        "Desarrollo de nuevas funcionalidades en aplicaciones web3 (orientado a la blockchain y el uso de criptoactivos).",
         "Mostrar y modificar datos de criptomonedas a través de servicios REST.",
         "Diseño e implementación de componentes de interfaz de usuario que interactúen con la blockchain y smart contracts.",
         "Documentación de componentes.",
-        "Ayudar al análisis y aportar posibles soluciones a la hora de desarrollar nuevas funcionalidades.",
+        "Ayudar al análisis de requerimientos y aportar posibles soluciones a la hora de desarrollar nuevas funcionalidades.",
         "Ayudar a los nuevos miembros del equipo en el onboarding, con respecto a la base de código y al despliegue local.",
         "Despliegue e integración continua de aplicaciones web utilizando servicios como Vercel o AWS.",
         "Desarrollo con renderizado del lado del servidor y optimización SEO."
@@ -25,13 +25,12 @@
   },
   "education": {
     "title": "Educación",
-    "career": "TECNICATURA UNIVERSITARIA EN DESARROLLO DE APLICACIONES INFORMATICAS | 2020 - 2023",
-    "university": "UNIVERSIDAD NACIONAL DEL CENTRO DE LA PROVINCIA DE BUENOS AIRES | TANDIL, ARGENTINA",
+    "career": "Tecnicatura Universitaria en Desarrollo de Aplicaciones Informaticas | 2020 - 2023",
+    "university": "Universidad Nacional del Centro de la Provincia de Buenos Aires | Tandil, Argentina",
     "knowledge": {
       "title": "Principales conocimientos adquiridos:",
       "list": [
         "Programación: Conceptos básicos, programación estructurada y orientada a objetos y nociones de complejidad.",
-        "Estructuras de datos.",
         "Comprensión y uso de metodologías de desarrollo.",
         "Procesos de verificación y documentación.",
         "Interfaces de usuario: manejo de eventos, conceptos de diseño de interfaces, principios de visualización en computadora, usabilidad y accesibilidad en distintos dispositivos.",
@@ -41,11 +40,12 @@
         "Capacidad para discutir ideas y alternativas para la solución de problemas.",
         "Capacidad de actualizarse en las nuevas tecnologías. metodologías y herramientas concernientes al desarrollo de sistemas.",
         "Implementar sistemas o sub-sistemas informáticos a partir de una descripción del problema y su diseño detallado, siguiendo una metodología dada.",
+        "Interpretar adecuadamente estructuras de datos y poder definir procesos de alta, bajas, modificaciones y consultas a estos datos.",
         "Aplicar prácticas metodológicas para administrar la calidad de un sistema informático."
       ]
     }
   },
-  "technologies":"Tecnologías",
+  "technologies": "Tecnologías",
   "languages": {
     "title": "Lenguajes",
     "spanish": "Español",

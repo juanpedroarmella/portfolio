@@ -8,7 +8,7 @@ const DialogMenu = dynamic(() => import("@/components/atoms/DialogMenu"));
 const Settings = () => {
   return (
     <DialogMenu
-      ActivateTooltipButton={
+    ActivateDialogButton={
         <IconButton>
           <SettingsIcon />
         </IconButton>

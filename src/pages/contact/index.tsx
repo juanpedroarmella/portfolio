@@ -1,3 +1,4 @@
+import useIsMobile from "@/hooks/useIsMobile";
 import useTranslation from "next-translate/useTranslation";
 import dynamic from "next/dynamic";
 
@@ -8,10 +9,15 @@ const FlexBox = dynamic(() => import("@/components/atoms/FlexBox"));
 
 const Contact: React.FC = () => {
   const { t } = useTranslation("contact");
+  const isMobile = useIsMobile();
   return (
-    <FlexBox flexDirection='column' gap={2}>
+    <FlexBox
+      flexDirection="column"
+      alignItems={isMobile ? "center" : "flex-start"}
+      gap={2}
+    >
       <Typography variant="h3">{t("title")}</Typography>
-      <GridBox >
+      <FlexBox flexDirection={isMobile ? "column" : "row"}>
         <SocialLink
           text="github.com/juanpedroarmella"
           href="http://github.com/juanpedroarmella"
@@ -30,7 +36,7 @@ const Contact: React.FC = () => {
           iconSrc="/linkedin.svg"
           iconAlt="Github"
         />
-      </GridBox>
+      </FlexBox>
     </FlexBox>
   );
 };

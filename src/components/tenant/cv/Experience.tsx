@@ -25,7 +25,7 @@ const Experience: React.FC<ExperienceProps> = (props) => {
   return (
     <GridBox gap={2} width="100%">
       <Typography variant="h3">{t("experience.title")}</Typography>
-      <Typography variant="h5">{t("experience.company")}</Typography>
+      <Typography variant="h5" >{t("experience.company")}</Typography>
       <Typography variant="h6">{t("experience.position")}</Typography>
       <GridBox gap={1}>
         <Typography variant="body1">{t("experience.description")}</Typography>
