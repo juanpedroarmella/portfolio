@@ -11,6 +11,7 @@ const Footer = dynamic(() => import("@/components/layout/footer/Footer"));
 
 const LayoutContent = styled(CenterContainer)({
   minHeight: "90vh",
+  minWidth:"90vw",
   marginTop: "3.5rem",
   paddingTop: "2rem",
   paddingBottom: "2rem",

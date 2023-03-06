@@ -11,9 +11,7 @@ const Education = dynamic(() => import("@/components/tenant/cv/Education"));
 const Technologies = dynamic(
   () => import("@/components/tenant/cv/Technologies")
 );
-const Languages = dynamic(
-  () => import("@/components/tenant/cv/Languages")
-);
+const Languages = dynamic(() => import("@/components/tenant/cv/Languages"));
 
 const GridBox = dynamic(() => import("@/components/atoms/GridBox"));
 

@@ -3,7 +3,6 @@ import useTranslation from "next-translate/useTranslation";
 import dynamic from "next/dynamic";
 
 const Typography = dynamic(() => import("@mui/material/Typography"));
-const GridBox = dynamic(() => import("@/components/atoms/GridBox"));
 const SocialLink = dynamic(() => import("@/components/atoms/SocialLink"));
 const FlexBox = dynamic(() => import("@/components/atoms/FlexBox"));
 
@@ -15,9 +14,10 @@ const Contact: React.FC = () => {
       flexDirection="column"
       alignItems={isMobile ? "center" : "flex-start"}
       gap={2}
+      width="100%"
     >
       <Typography variant="h3">{t("title")}</Typography>
-      <FlexBox flexDirection={isMobile ? "column" : "row"}>
+      <FlexBox flexDirection={"column"} gap={1} alignItems="flex-start">
         <SocialLink
           text="github.com/juanpedroarmella"
           href="http://github.com/juanpedroarmella"
