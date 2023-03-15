@@ -6,7 +6,9 @@ const nextConfig = {
 const nextTranslate = require("next-translate");
 
 module.exports = nextTranslate({
-  webpack: (config, { isServer, webpack }) => {
+  webpack: (config) => {
+    config.resolve.symlinks = false;
     return config;
   },
+  ...nextConfig,
 });
