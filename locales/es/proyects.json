@@ -1,3 +1,18 @@
 {
-  "title": "Proyectos"
+  "title": "Proyectos",
+  "go-to-proyect": "Ver proyecto",
+  "proyects": [
+    {
+      "title": "Paint",
+      "description": "Es una herramienta para dibujar y editar imágenes.",
+      "date": "2020",
+      "href": "https://juanpedroarmella.github.io/paint/"
+    },
+    {
+      "title": "Cuatro en línea",
+      "description": "Es un juego de estrategia en el que dos jugadores se turnan para soltar discos de colores en un tablero vertical con 6 filas y 7 columnas. El objetivo es conectar cuatro discos del mismo color en línea recta, ya sea horizontal, vertical o diagonalmente, antes que el otro jugador lo haga.",
+      "date": "2020",
+      "href": "https://juanpedroarmella.github.io/connectfour/"
+    }
+  ]
 }

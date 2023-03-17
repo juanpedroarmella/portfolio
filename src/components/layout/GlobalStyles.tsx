@@ -14,6 +14,7 @@ const GlobalCustomStyle = () => (
       },
       a: {
         textDecoration: "none",
+        color: "inherit"
       },
     }}
   />

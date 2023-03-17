@@ -1,3 +1,18 @@
 {
-  "title": "Proyects"
+  "title": "Proyects",
+  "go-to-proyect": "Go to proyect",
+  "proyects": [
+    {
+      "title": "Paint",
+      "description": "Is a tool for drawing and editing images.",
+      "date": "2020",
+      "href": "https://juanpedroarmella.github.io/paint/"
+    },
+    {
+      "title": "Connect Four",
+      "description": "It's a strategy game where two players take turns dropping colored discs into a vertical board with 6 rows and 7 columns. The objective is to connect four discs of the same color in a straight line, either horizontally, vertically, or diagonally, before the other player does.",
+      "date": "2020",
+      "href": "https://juanpedroarmella.github.io/connectfour/"
+    }
+  ]
 }
