@@ -25,7 +25,7 @@ const Layout: React.FC<LayoutProps> = (props) => {
   const { children } = props;
   const isMobile = useIsMobile();
   return (
-    <CenterContainer direction="column">
+    <CenterContainer direction="column" >
       <Header />
       <LayoutContent direction="column" px={isMobile ? '2vw ': "10vw"}>
         {children}
