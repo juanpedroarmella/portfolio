@@ -1,49 +1,47 @@
-import useIsMobile from "@/hooks/useIsMobile";
-import Button from "@mui/material/Button";
-import { useTheme } from "@mui/material/styles";
-import dynamic from "next/dynamic";
-import { useState } from "react";
-import MobileNavButton from "../atoms/MobileNavButton";
-import NavigationButton from "../atoms/NavigationButton";
-import SelectLanguage from "../translate/SelectLanguage";
+import useIsMobile from '@/hooks/useIsMobile'
+import { useTheme } from '@mui/material/styles'
+import dynamic from 'next/dynamic'
+import { useState } from 'react'
+import MobileNavButton from '../atoms/MobileNavButton'
+import SelectLanguage from '../translate/SelectLanguage'
 
-const IconButton = dynamic(() => import("@mui/material/IconButton"));
-const SettingsIcon = dynamic(() => import("@mui/icons-material/Settings"));
-const DialogMenu = dynamic(() => import("@/components/atoms/DialogMenu"));
+const IconButton = dynamic(async () => await import('@mui/material/IconButton'))
+const SettingsIcon = dynamic(async () => await import('@mui/icons-material/Settings'))
+const DialogMenu = dynamic(async () => await import('@/components/atoms/DialogMenu'))
 
-const Settings = () => {
-  const isMobile = useIsMobile();
-  const theme = useTheme();
-  const [selected, setSelected] = useState(false);
+const Settings = (): JSX.Element => {
+  const isMobile = useIsMobile()
+  const theme = useTheme()
+  const [selected, setSelected] = useState(false)
 
-
-  const toggleSelected = () => {
-    setSelected(!selected);
-    console.log(selected);
-  };
+  const toggleSelected = (): void => {
+    setSelected(!selected)
+  }
 
   return (
     <DialogMenu
       ActivateDialogButton={
-        isMobile ? (
-          <MobileNavButton
-            startIcon={<SettingsIcon />}
-            theme={theme}
-            selected={selected}
-            onClick={() => toggleSelected()}
-          >
-            Settings
-          </MobileNavButton>
-        ) : (
-          <IconButton>
-            <SettingsIcon />
-          </IconButton>
-        )
+        isMobile
+          ? (
+            <MobileNavButton
+              startIcon={<SettingsIcon />}
+              theme={theme}
+              selected={selected}
+              onClick={() => toggleSelected()}
+            >
+              Settings
+            </MobileNavButton>
+            )
+          : (
+            <IconButton>
+              <SettingsIcon />
+            </IconButton>
+            )
       }
     >
       <SelectLanguage />
     </DialogMenu>
-  );
-};
+  )
+}
 
-export default Settings;
+export default Settings

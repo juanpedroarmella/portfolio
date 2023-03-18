@@ -1,22 +1,20 @@
-import styled from "@emotion/styled";
-import dynamic from "next/dynamic";
+import styled from '@emotion/styled'
+import dynamic from 'next/dynamic'
 
-const Box = dynamic(() => import("@mui/material/Box"));
+const Box = dynamic(async () => await import('@mui/material/Box'))
 
 const Container = styled(Box)({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-});
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
+})
 
 interface CenterContainerProps {
-  direction?: "row" | "column";
+  direction?: 'row' | 'column'
 }
 
-const CenterContainer = styled(Container)<CenterContainerProps>(
-  ({ direction }) => ({
-    flexDirection: direction || "row",
-  })
-);
+const CenterContainer = styled(Container)<CenterContainerProps>(({ direction }) => ({
+  flexDirection: direction ?? 'row'
+}))
 
-export default CenterContainer;
+export default CenterContainer

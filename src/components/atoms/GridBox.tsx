@@ -1,10 +1,10 @@
-import styled from "@emotion/styled";
-import dynamic from "next/dynamic";
+import styled from '@emotion/styled'
+import dynamic from 'next/dynamic'
 
-const Box = dynamic(() => import("@mui/material/Box"));
+const Box = dynamic(async () => await import('@mui/material/Box'))
 
 const GridBox = styled(Box)({
-  display: "grid",
-});
+  display: 'grid'
+})
 
-export default GridBox;
+export default GridBox

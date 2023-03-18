@@ -1,23 +1,23 @@
-import GlobalStyles from "@mui/material/GlobalStyles";
+import GlobalStyles from '@mui/material/GlobalStyles'
 
-const GlobalCustomStyle = () => (
+const GlobalCustomStyle = (): JSX.Element => (
   <GlobalStyles
     styles={{
       body: { margin: 0, padding: 0 },
       img: {
-        maxWidth: "100%",
+        maxWidth: '100%'
       },
-      "*": {
-        boxSizing: "border-box",
+      '*': {
+        boxSizing: 'border-box',
         fontFamily: "'Roboto', sans-serif",
-        fontWeight: 400,
+        fontWeight: 400
       },
       a: {
-        textDecoration: "none",
-        color: "inherit"
-      },
+        textDecoration: 'none',
+        color: 'inherit'
+      }
     }}
   />
-);
+)
 
-export default GlobalCustomStyle;
+export default GlobalCustomStyle
