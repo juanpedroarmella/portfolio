@@ -32,7 +32,6 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-      <Logo />
       <Nav />
       <Settings />
     </HeaderWrapper>

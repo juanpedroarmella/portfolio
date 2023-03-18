@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 const Settings = dynamic(() => import("@/components/settings/Settings"));
 const FlexBox = dynamic(() => import("@/components/atoms/FlexBox"));
 const Nav = dynamic(() => import("@/components/layout/header/Nav"));
-const Logo = dynamic(() => import("@/components/layout/header/Logo"));
 const IconButton = dynamic(() => import("@mui/material/IconButton"));
 const MenuIcon = dynamic(() => import("@mui/icons-material/Menu"));
 const Drawer = dynamic(() => import("@/components/atoms/Drawer"));
@@ -26,11 +25,14 @@ const MobileHeaderWrapper = styled(FlexBox)({
 
 const ElementsWrapper = styled(FlexBox)({
   height: "100vh",
+  width: "50vw",
   flexDirection: "column",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: "0 3rem",
-  margin: 0,
+  padding: "1rem",
+  "& > *": {
+    width: "100%",
+  },
 });
 
 const MobileHeader = () => {
@@ -45,7 +47,6 @@ const MobileHeader = () => {
         }
       >
         <ElementsWrapper>
-          <Logo />
           <Nav direction="column" />
           <Settings />
         </ElementsWrapper>

@@ -2,6 +2,7 @@ import { ButtonProps } from "@mui/material/Button";
 import { IconButtonProps } from "@mui/material";
 import dynamic from "next/dynamic";
 import React from "react";
+import { useRouter } from "next/router";
 
 const Drawer = dynamic(() => import("@mui/material/Drawer"));
 
@@ -32,6 +33,18 @@ const TemporaryDrawer: React.FC<Props> = (props) => {
 
       setState({ ...state, [anchor]: open });
     };
+
+  const router = useRouter();
+
+  React.useEffect(() => {
+    const handleRouteChange = () => {
+      setState({ ...state, [props.anchor]: false });
+    };
+    router.events.on("routeChangeStart", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, [props.anchor, router.events, state]);
 
   return (
     <>

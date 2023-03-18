@@ -3,6 +3,7 @@ import { IconButtonProps } from "@mui/material/IconButton/IconButton";
 import React from "react";
 import dynamic from "next/dynamic";
 import Box from "@mui/material/Box";
+import MenuItem from "@mui/material/MenuItem";
 
 interface DialogMenuProps {
   children: React.ReactNode;
@@ -37,10 +38,10 @@ const DialogMenu: React.FC<DialogMenuProps> = (props) => {
         open={open}
         onClose={handleClose}
         disableScrollLock
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        transformOrigin={{ vertical: "bottom", horizontal: "center" }}
       >
-        <Box px={2} py={1}>
-          {children}
-        </Box>
+        <MenuItem>{children}</MenuItem>
       </Menu>
     </div>
   );

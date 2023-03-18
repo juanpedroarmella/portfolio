@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
-const GlobalStyles = dynamic(() => import("@/components/layout/GlobalStyles"));
+const GlobalStyles = dynamic(() => import("@/styles/GlobalStyles"));
 const Layout = dynamic(() => import("@/components/layout/Layout"));
 
 
