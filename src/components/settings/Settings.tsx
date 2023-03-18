@@ -1,5 +1,6 @@
 import useIsMobile from '@/hooks/useIsMobile'
 import { useTheme } from '@mui/material/styles'
+import useTranslation from 'next-translate/useTranslation'
 import dynamic from 'next/dynamic'
 import { useState } from 'react'
 import MobileNavButton from '../atoms/MobileNavButton'
@@ -13,6 +14,7 @@ const Settings = (): JSX.Element => {
   const isMobile = useIsMobile()
   const theme = useTheme()
   const [selected, setSelected] = useState(false)
+  const { t } = useTranslation('common')
 
   const toggleSelected = (): void => {
     setSelected(!selected)
@@ -29,7 +31,7 @@ const Settings = (): JSX.Element => {
               selected={selected}
               onClick={() => toggleSelected()}
             >
-              Settings
+              {t('settings')}
             </MobileNavButton>
             )
           : (

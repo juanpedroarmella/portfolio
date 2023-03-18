@@ -15,14 +15,14 @@ interface SelectLanguageProps {
 const SelectLanguage = ({ className }: SelectLanguageProps): JSX.Element => {
   const { t, lang } = useTranslation('common')
 
-  const handleChange = useCallback(async (event: SelectChangeEvent) => {
-    await setLanguage(event.target.value)
+  const handleChange = useCallback((event: SelectChangeEvent) => {
+    void setLanguage(event.target.value)
   }, [])
 
   return (
     <FormControl className={className}>
       <InputLabel>{t('language')}</InputLabel>
-      <Select label={t('language')} value={lang} onChange={() => handleChange}>
+      <Select label={t('language')} value={lang} onChange={e => handleChange(e)}>
         {i18nConfig.locales.map((lng: string) => (
           <MenuItem value={lng} key={lng}>
             {t(`language-name-${lng}`)}
