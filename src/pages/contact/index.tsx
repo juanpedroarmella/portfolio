@@ -10,12 +10,7 @@ const Contact: React.FC = () => {
   const { t } = useTranslation('contact')
   const isMobile = useIsMobile()
   return (
-    <FlexBox
-      flexDirection='column'
-      alignItems={isMobile ? 'center' : 'flex-start'}
-      gap={2}
-      width='100%'
-    >
+    <FlexBox flexDirection='column' gap={2} width='80vw' height='100vh'>
       <Typography variant='h3'>{t('title')}</Typography>
       <FlexBox flexDirection='column' gap={1} alignItems='flex-start'>
         <SocialLink

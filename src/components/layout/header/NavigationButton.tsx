@@ -32,7 +32,7 @@ const NavigationButton: React.FC<NavigationButtonsProps> = props => {
           </MobileNavButton>
           )
         : (
-          <DesktopNavButton disabled={selected}>{props.text}</DesktopNavButton>
+          <DesktopNavButton selected={selected}>{props.text}</DesktopNavButton>
           )}
     </Link>
   )

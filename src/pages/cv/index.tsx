@@ -18,7 +18,7 @@ const GridBox = dynamic(async () => await import('@/components/atoms/GridBox'))
 const Cv: React.FC = () => {
   const { t } = useTranslation('cv')
   return (
-    <CenterContainer direction='column' gap={15}>
+    <CenterContainer direction='column' gap={8}>
       <MainTitle />
       <GridBox gap={5}>
         <Profile t={t} />

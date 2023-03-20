@@ -15,6 +15,7 @@ const HeaderWrapper = styled(Box)<HeaderWrapperProps>(props => {
     .slice(rgbString.indexOf('(') + 1, rgbString.lastIndexOf(')'))
     .split(',')
     .toString()
+
   return {
     position: 'fixed',
     top: 0,
@@ -29,9 +30,9 @@ const HeaderWrapper = styled(Box)<HeaderWrapperProps>(props => {
     marginTop: '1rem',
     transition: 'box-shadow .2s ease',
     zIndex: 1,
-    backdropFilter: 'blur(15px)',
+    backdropFilter: 'blur(20px)',
     ...(scroll && {
-      boxShadow: 'rgba(0, 0, 0, 0.08) 0px 3px 14px'
+      boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.08)'
     })
   }
 })

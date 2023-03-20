@@ -9,17 +9,12 @@ interface Props {
   linkText: string
 }
 
-const Proyect: React.FC<Props> = (props) => {
+const Proyect: React.FC<Props> = props => {
   return (
     <FlexBox flexDirection='column' gap={2}>
       <Typography variant='h4'>{props.title}</Typography>
       <Typography variant='body1'>{props.description}</Typography>
-      <Button
-        variant='outlined'
-        size='small'
-        sx={{ width: 'fit-content' }}
-        color='info'
-      >
+      <Button variant='contained' size='small' sx={{ width: 'fit-content' }}>
         <a href={props.href} target='_blank' rel='noreferrer'>
           {props.linkText}
         </a>

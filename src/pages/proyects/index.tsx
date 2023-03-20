@@ -19,7 +19,7 @@ const Proyects: React.FC = () => {
   const arrProyects = React.useMemo(() => t('proyects', {}, { returnObjects: true }) as [], [t])
 
   return (
-    <FlexBox flexDirection='column' gap={2}>
+    <FlexBox flexDirection='column' gap={2} height='100vh'>
       <Typography variant='h3'>{t('title')}</Typography>
       {arrProyects.map((proyect: ProyectType) => {
         const { title, description, date, href } = proyect
