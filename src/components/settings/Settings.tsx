@@ -3,7 +3,7 @@ import { useTheme } from '@mui/material/styles'
 import useTranslation from 'next-translate/useTranslation'
 import dynamic from 'next/dynamic'
 import { useState } from 'react'
-import MobileNavButton from '../atoms/MobileNavButton'
+import MobileNavButton from '../layout/header/MobileNavButton'
 import SelectLanguage from '../translate/SelectLanguage'
 
 const IconButton = dynamic(async () => await import('@mui/material/IconButton'))

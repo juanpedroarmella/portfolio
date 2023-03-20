@@ -4,6 +4,7 @@ import React from 'react'
 import { Button, useTheme } from '@mui/material'
 import Link from 'next/link'
 import MobileNavButton from './MobileNavButton'
+import DesktopNavButton from './DesktopNavButton'
 
 interface NavigationButtonsProps {
   href: string
@@ -11,17 +12,14 @@ interface NavigationButtonsProps {
   startIcon: React.ReactNode
 }
 
-const NavigationButton: React.FC<NavigationButtonsProps> = (props) => {
+const NavigationButton: React.FC<NavigationButtonsProps> = props => {
   const router = useRouter()
 
   const { pathname } = router
 
   const isMobile = useIsMobile()
 
-  const selected = React.useMemo(
-    () => props.href === pathname,
-    [pathname, props.href]
-  )
+  const selected = React.useMemo(() => props.href === pathname, [pathname, props.href])
 
   const theme = useTheme()
 
@@ -29,18 +27,12 @@ const NavigationButton: React.FC<NavigationButtonsProps> = (props) => {
     <Link href={props.href} style={{ width: '100%' }}>
       {isMobile
         ? (
-          <MobileNavButton
-            selected={selected}
-            startIcon={props.startIcon}
-            theme={theme}
-          >
+          <MobileNavButton selected={selected} startIcon={props.startIcon} theme={theme}>
             {props.text}
           </MobileNavButton>
           )
         : (
-          <Button variant='text'>
-            {props.text}
-          </Button>
+          <DesktopNavButton disabled={selected}>{props.text}</DesktopNavButton>
           )}
     </Link>
   )
