@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
   const { t } = useTranslation('contact')
   return (
     <CenterContainer direction='column' width='100%' withpadding='true'>
-      <FlexBox flexDirection='column' height='100vh' width='100%' gap={1} alignItems='flex-start'>
+      <FlexBox flexDirection='column' width='100%' height='100vh' gap={1} alignItems='flex-start'>
         <Typography variant='h3'>{t('title')}</Typography>
         <SocialLink
           text='github.com/juanpedroarmella'

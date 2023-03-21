@@ -45,8 +45,9 @@ const Languages: React.FC<LanguagesProps> = (props): JSX.Element => {
             <SmallCheckIcon />
             <GridBox>
               <ListItemText
+                disableTypography
                 sx={{ mt: 1 }}
-                primary='English'
+                primary={<Typography>English</Typography>}
                 secondary={
                   <GridBox mt='0.3rem'>
                     <Body2>C1 Advanced</Body2>

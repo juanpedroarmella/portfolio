@@ -9,6 +9,7 @@ const LayoutContent = styled(CenterContainer)<{ theme?: Theme }>(props => {
   return {
     minHeight: '90vh',
     paddingBottom: '2rem',
+    width: '100%',
     background: props.theme.palette.background.paper
   }
 })
