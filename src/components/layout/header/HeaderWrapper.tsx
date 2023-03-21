@@ -1,4 +1,3 @@
-import useScroll from '@/hooks/useScroll'
 import styled from '@emotion/styled'
 import { Box, Theme } from '@mui/material'
 
@@ -6,10 +5,8 @@ interface HeaderWrapperProps {
   theme?: Theme
 }
 
-const HeaderWrapper = styled(Box)<HeaderWrapperProps>(props => {
+const HeaderWrapper = styled(Box)<HeaderWrapperProps>((props) => {
   const { theme } = props
-  const scroll = useScroll()
-
   return {
     position: 'fixed',
     top: 0,
@@ -26,9 +23,7 @@ const HeaderWrapper = styled(Box)<HeaderWrapperProps>(props => {
     transition: 'box-shadow .2s ease',
     zIndex: 1,
     backdropFilter: 'blur(20px)',
-    ...(scroll && {
-      boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.08)'
-    })
+    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.08)'
   }
 })
 
