@@ -1,8 +1,6 @@
+import GridBox from '@/components/atoms/GridBox'
 import { Typography } from '@mui/material'
 import { Translate } from 'next-translate'
-import dynamic from 'next/dynamic'
-
-const GridBox = dynamic(async () => await import('@/components/atoms/GridBox'))
 
 interface ProfileProps {
   t: Translate

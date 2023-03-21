@@ -1,14 +1,12 @@
 import FlexBox from '@/components/atoms/FlexBox'
 import styled from '@emotion/styled'
-import { Theme } from '@mui/material'
-import dynamic from 'next/dynamic'
 import HeaderWrapper from './HeaderWrapper'
-
-const Settings = dynamic(async () => await import('@/components/settings/Settings'))
-const Nav = dynamic(async () => await import('@/components/layout/header/Nav'))
-const IconButton = dynamic(async () => await import('@mui/material/IconButton'))
-const MenuIcon = dynamic(async () => await import('@mui/icons-material/Menu'))
-const Drawer = dynamic(async () => await import('@/components/atoms/Drawer'))
+import Nav from './Nav'
+import MenuIcon from '@mui/icons-material/Menu'
+import Drawer from '@/components/atoms/Drawer'
+import IconButton from '@mui/material/IconButton'
+import { Theme } from '@mui/material/styles'
+import Settings from '@/components/settings/Settings'
 
 const MobileHeaderWrapper = styled(HeaderWrapper)(({ theme }: { theme?: Theme }) => {
   return {
@@ -36,7 +34,7 @@ const MobileHeader = (): JSX.Element => {
         anchor='left'
         ActivateDrawerButton={
           <IconButton>
-            <MenuIcon color='primary' />
+            <MenuIcon color='secondary' />
           </IconButton>
         }
       >

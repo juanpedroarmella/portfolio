@@ -1,7 +1,7 @@
 import useIsMobile from '@/hooks/useIsMobile'
 import { useRouter } from 'next/router'
 import React from 'react'
-import { Button, useTheme } from '@mui/material'
+import { useTheme } from '@mui/material'
 import Link from 'next/link'
 import MobileNavButton from './MobileNavButton'
 import DesktopNavButton from './DesktopNavButton'

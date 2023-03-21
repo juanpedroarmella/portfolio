@@ -1,46 +1,45 @@
 import useIsMobile from '@/hooks/useIsMobile'
 import { useTheme } from '@mui/material/styles'
 import useTranslation from 'next-translate/useTranslation'
-import dynamic from 'next/dynamic'
 import { useState } from 'react'
 import MobileNavButton from '../layout/header/MobileNavButton'
+import IconButton from '@mui/material/IconButton'
+import SettingsIcon from '@mui/icons-material/Settings'
+import DialogMenu from '../atoms/DialogMenu'
 import SelectLanguage from '../translate/SelectLanguage'
 
-const IconButton = dynamic(async () => await import('@mui/material/IconButton'))
-const SettingsIcon = dynamic(async () => await import('@mui/icons-material/Settings'))
-const DialogMenu = dynamic(async () => await import('@/components/atoms/DialogMenu'))
-
-const Settings = (): JSX.Element => {
+const Settings: React.FC = () => {
   const isMobile = useIsMobile()
   const theme = useTheme()
-  const [selected, setSelected] = useState(false)
+  const [selected, setSelected] = useState<boolean>(false)
   const { t } = useTranslation('common')
 
   const toggleSelected = (): void => {
-    setSelected(!selected)
+    setSelected(prevState => !prevState)
   }
 
-  return (
-    <DialogMenu
-      ActivateDialogButton={
-        isMobile
-          ? (
-            <MobileNavButton
-              startIcon={<SettingsIcon />}
-              theme={theme}
-              selected={selected}
-              onClick={() => toggleSelected()}
-            >
-              {t('settings')}
-            </MobileNavButton>
-            )
-          : (
-            <IconButton>
-              <SettingsIcon />
-            </IconButton>
-            )
-      }
+  const mobileNavButton = (
+    <MobileNavButton
+      startIcon={<SettingsIcon color='secondary' />}
+      theme={theme}
+      selected={selected}
+      onClick={toggleSelected}
+      data-test-id='mobile-button-nav-settings'
     >
+      {t('settings')}
+    </MobileNavButton>
+  )
+
+  const desktopIconButton = (
+    <IconButton>
+      <SettingsIcon data-test-id='desktop-button-nav-settings' color='secondary' />
+    </IconButton>
+  )
+
+  const activateDialogButton = isMobile ? mobileNavButton : desktopIconButton
+
+  return (
+    <DialogMenu ActivateDialogButton={activateDialogButton}>
       <SelectLanguage />
     </DialogMenu>
   )

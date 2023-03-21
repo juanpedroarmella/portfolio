@@ -1,7 +1,5 @@
-import dynamic from 'next/dynamic'
+import { Typography } from '@mui/material'
 import useTranslation from 'next-translate/useTranslation'
-
-const Typography = dynamic(async () => await import('@mui/material/Typography'))
 
 const Home: React.FC = () => {
   const { t } = useTranslation('home')

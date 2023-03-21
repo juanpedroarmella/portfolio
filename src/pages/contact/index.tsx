@@ -1,18 +1,15 @@
-import useIsMobile from '@/hooks/useIsMobile'
+import CenterContainer from '@/components/atoms/CenterContainer'
+import FlexBox from '@/components/atoms/FlexBox'
+import SocialLink from '@/components/atoms/SocialLink'
+import { Typography } from '@mui/material'
 import useTranslation from 'next-translate/useTranslation'
-import dynamic from 'next/dynamic'
-
-const Typography = dynamic(async () => await import('@mui/material/Typography'))
-const SocialLink = dynamic(async () => await import('@/components/atoms/SocialLink'))
-const FlexBox = dynamic(async () => await import('@/components/atoms/FlexBox'))
 
 const Contact: React.FC = () => {
   const { t } = useTranslation('contact')
-  const isMobile = useIsMobile()
   return (
-    <FlexBox flexDirection='column' gap={2} width='80vw' height='100vh'>
-      <Typography variant='h3'>{t('title')}</Typography>
-      <FlexBox flexDirection='column' gap={1} alignItems='flex-start'>
+    <CenterContainer direction='column' width='100%' withpadding='true'>
+      <FlexBox flexDirection='column' height='100vh' width='100%' gap={1} alignItems='flex-start'>
+        <Typography variant='h3'>{t('title')}</Typography>
         <SocialLink
           text='github.com/juanpedroarmella'
           href='http://github.com/juanpedroarmella'
@@ -32,7 +29,7 @@ const Contact: React.FC = () => {
           iconAlt='Github'
         />
       </FlexBox>
-    </FlexBox>
+    </CenterContainer>
   )
 }
 

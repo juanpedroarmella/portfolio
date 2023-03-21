@@ -1,18 +1,16 @@
 import styled from '@emotion/styled'
-import dynamic from 'next/dynamic'
 import useTranslation from 'next-translate/useTranslation'
 import NavigationButton from '@/components/layout/header/NavigationButton'
 import PersonIcon from '@mui/icons-material/Person'
 import AppsIcon from '@mui/icons-material/Apps'
 import CallIcon from '@mui/icons-material/Call'
-
-const Box = dynamic(async () => await import('@mui/material/Box'))
+import Box from '@mui/material/Box'
 
 const Container = styled(Box)({
   display: 'flex',
   justifyContent: 'flex-end',
   alignItems: 'center',
-  rowGap: 10
+  rowGap: 8
 })
 interface NavProps {
   direction?: 'row' | 'column'

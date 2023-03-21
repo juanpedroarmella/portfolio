@@ -1,27 +1,16 @@
+import CenterContainer from '@/components/atoms/CenterContainer'
+import GridBox from '@/components/atoms/GridBox'
+import { Typography, List, ListItem, ListItemText } from '@mui/material'
 import { Translate } from 'next-translate'
-import dynamic from 'next/dynamic'
 import React from 'react'
-
-const GridBox = dynamic(async () => await import('@/components/atoms/GridBox'))
-const List = dynamic(async () => await import('@mui/material/List'))
-const ListItem = dynamic(async () => await import('@mui/material/ListItem'))
-const Typography = dynamic(async () => await import('@mui/material/Typography'))
-const ListItemText = dynamic(async () => await import('@mui/material/ListItemText'))
-const CenterContainer = dynamic(
-  async () => await import('@/components/atoms/CenterContainer')
-)
-const CheckIcon = dynamic(async () => await import('@mui/icons-material/Check'))
-
+import CheckIcon from '@mui/icons-material/Check'
 interface ExperienceProps {
   t: Translate
 }
 
-const Experience: React.FC<ExperienceProps> = (props) => {
+const Experience: React.FC<ExperienceProps> = props => {
   const { t } = props
-  const arrTasks = React.useMemo(
-    () => t('experience.tasks.list', {}, { returnObjects: true }) as [],
-    [t]
-  )
+  const arrTasks = React.useMemo(() => t('experience.tasks.list', {}, { returnObjects: true }) as [], [t])
   return (
     <GridBox gap={2} width='100%'>
       <Typography variant='h3'>{t('experience.title')}</Typography>
@@ -34,7 +23,7 @@ const Experience: React.FC<ExperienceProps> = (props) => {
           {arrTasks.map((task: string, index: number) => (
             <ListItem disablePadding key={index}>
               <CenterContainer gap={1}>
-                <CheckIcon fontSize='small' />
+                <CheckIcon fontSize='small' color='secondary' />
                 <ListItemText primary={task} />
               </CenterContainer>
             </ListItem>

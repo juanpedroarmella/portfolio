@@ -7,26 +7,29 @@ import FormControl from '@mui/material/FormControl'
 import InputLabel from '@mui/material/InputLabel'
 import Select from '@mui/material/Select'
 import MenuItem from '@mui/material/MenuItem'
+import { styled } from '@mui/material/styles'
 
-interface SelectLanguageProps {
-  className?: string
-}
+const StyledMenuItem = styled(MenuItem)({
+  '& li.MuiButtonBase-root.MuiMenuItem-root:hover': {
+    backgroundColor: 'white'
+  }
+})
 
-const SelectLanguage = ({ className }: SelectLanguageProps): JSX.Element => {
+const SelectLanguage = (): JSX.Element => {
   const { t, lang } = useTranslation('common')
 
-  const handleChange = useCallback((event: SelectChangeEvent) => {
-    void setLanguage(event.target.value)
+  const handleChange = useCallback((event: SelectChangeEvent<unknown>) => {
+    void setLanguage(event.target.value as string)
   }, [])
 
   return (
-    <FormControl className={className}>
-      <InputLabel>{t('language')}</InputLabel>
-      <Select label={t('language')} value={lang} onChange={e => handleChange(e)}>
+    <FormControl data-test-id='form-control-select-language'>
+      <InputLabel data-test-id='label-select-language'>{t('language')}</InputLabel>
+      <Select label={t('language')} data-test-id='select-language' value={lang} onChange={e => handleChange(e)}>
         {i18nConfig.locales.map((lng: string) => (
-          <MenuItem value={lng} key={lng}>
+          <StyledMenuItem data-test-id={`language-${lng}`} value={lng} key={lng}>
             {t(`language-name-${lng}`)}
-          </MenuItem>
+          </StyledMenuItem>
         ))}
       </Select>
     </FormControl>

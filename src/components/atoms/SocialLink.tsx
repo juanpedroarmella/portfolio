@@ -1,11 +1,7 @@
-import dynamic from 'next/dynamic'
 import Image from 'next/image'
-
-const CenterContainer = dynamic(
-  async () => await import('@/components/atoms/CenterContainer')
-)
-const CustomLink = dynamic(async () => await import('@/components/atoms/CustomLink'))
-const Typography = dynamic(async () => await import('@mui/material/Typography'))
+import CenterContainer from './CenterContainer'
+import { Typography } from '@mui/material'
+import CustomLink from './CustomLink'
 
 interface SocialLinkProps {
   iconSrc: string
@@ -14,16 +10,12 @@ interface SocialLinkProps {
   text: string
 }
 
-const SocialLink: React.FC<SocialLinkProps> = (props) => {
+const SocialLink: React.FC<SocialLinkProps> = props => {
   return (
-    <CenterContainer gap={1} flexWrap='wrap'>
+    <CenterContainer gap={2} flexWrap='wrap'>
       <Image src={props.iconSrc} alt={props.iconAlt} width={40} height={40} />
       <CustomLink href={props.href} target='_blank'>
-        <Typography
-          variant='overline'
-          color='gray'
-          sx={{ textDecoration: 'underline' }}
-        >
+        <Typography variant='overline' color='text.primary' sx={{ textDecoration: 'underline' }}>
           {props.text}
         </Typography>
       </CustomLink>

@@ -1,8 +1,6 @@
 import styled from '@emotion/styled'
+import { Typography } from '@mui/material'
 import { Theme } from '@mui/material/styles'
-import dynamic from 'next/dynamic'
-
-const Typography = dynamic(async () => await import('@mui/material/Typography'))
 
 const FooterWrapper = styled('footer')(({ theme }: { theme?: Theme }) => {
   return {

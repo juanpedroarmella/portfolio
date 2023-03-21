@@ -1,11 +1,7 @@
+import GridBox from '@/components/atoms/GridBox'
 import { Typography } from '@mui/material'
-import dynamic from 'next/dynamic'
 import { Translate } from 'next-translate'
-
-const GridBox = dynamic(async () => await import('@/components/atoms/GridBox'))
-const TechnologiesList = dynamic(
-  async () => await import('@/components/tenant/cv/TechnologiesList')
-)
+import TechnologiesList from './TechnologiesList'
 
 interface TechnologiesProps {
   t: Translate

@@ -1,6 +1,6 @@
 import { Theme } from '@mui/material/styles'
-import styled from '@emotion/styled'
 import Button from '@mui/material/Button'
+import styled from '@emotion/styled'
 
 interface DesktopNavButtonProps {
   theme?: Theme
@@ -14,9 +14,27 @@ const DesktopNavButton = styled(Button)<DesktopNavButtonProps>(props => {
     variant: 'text',
     fontWeight: '700',
     textTransform: 'capitalize',
-    color: selected ? theme.palette.primary.main : theme.palette.text.secondary,
+    color: theme.palette.text.primary,
+    position: 'relative',
+    textDecoration: 'none',
+    '&::after': {
+      content: '""',
+      position: 'absolute',
+      bottom: 3,
+      left: 0,
+      width: selected ? '35%' : 0,
+      marginLeft: '10%',
+      height: '2px',
+      backgroundColor: theme.palette.text.primary,
+      transition: 'all 0.2s ease-in'
+    },
     '&:hover': {
-      background: 'transparent'
+      backgroundColor: 'transparent',
+      color: theme.palette.secondary.main,
+      '&::after': {
+        width: '35%',
+        backgroundColor: theme.palette.secondary.main
+      }
     }
   }
 })

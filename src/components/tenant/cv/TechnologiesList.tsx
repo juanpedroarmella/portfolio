@@ -1,12 +1,8 @@
+import CenterContainer from '@/components/atoms/CenterContainer'
+import GridBox from '@/components/atoms/GridBox'
+import { Typography } from '@mui/material'
 import { capitalize } from '@mui/material/utils'
-import dynamic from 'next/dynamic'
 import Image from 'next/image'
-
-const CenterContainer = dynamic(
-  async () => await import('@/components/atoms/CenterContainer')
-)
-const GridBox = dynamic(async () => await import('@/components/atoms/GridBox'))
-const Typography = dynamic(async () => await import('@mui/material/Typography'))
 
 const requireTechImages = (require as any).context(
   'public/language-icons/',

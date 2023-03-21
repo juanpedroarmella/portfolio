@@ -1,7 +1,6 @@
 import { Theme } from '@mui/material/styles'
 import styled from '@emotion/styled'
 import Button from '@mui/material/Button'
-import { blue } from '@mui/material/colors'
 
 interface MobileNavButtonProps {
   selected: boolean
@@ -11,14 +10,12 @@ interface MobileNavButtonProps {
 const MobileNavButton = styled(Button)<MobileNavButtonProps>(({ selected, theme }) => ({
   variant: 'text',
   width: '100%',
-  size: 'large',
   justifyContent: 'start',
   paddingLeft: '1rem',
-  columnGap: '3%',
-  fontWeight: '700',
+  fontWeight: '600',
   textTransform: 'capitalize',
-  color: selected ? theme.palette.primary.main : theme.palette.text.secondary,
-  background: selected ? blue[50] : 'inherit'
+  color: selected ? theme.palette.text.primary : theme.palette.secondary.main,
+  background: selected ? theme.palette.action.focus : 'inherit'
 }))
 
 export default MobileNavButton

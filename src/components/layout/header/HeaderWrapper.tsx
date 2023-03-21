@@ -1,6 +1,6 @@
 import useScroll from '@/hooks/useScroll'
 import styled from '@emotion/styled'
-import { Box, hexToRgb, Theme } from '@mui/material'
+import { Box, Theme } from '@mui/material'
 
 interface HeaderWrapperProps {
   theme?: Theme
@@ -10,12 +10,6 @@ const HeaderWrapper = styled(Box)<HeaderWrapperProps>(props => {
   const { theme } = props
   const scroll = useScroll()
 
-  const rgbString = hexToRgb(theme?.palette.background.default)
-  const rgbValues = rgbString
-    .slice(rgbString.indexOf('(') + 1, rgbString.lastIndexOf(')'))
-    .split(',')
-    .toString()
-
   return {
     position: 'fixed',
     top: 0,
@@ -24,7 +18,8 @@ const HeaderWrapper = styled(Box)<HeaderWrapperProps>(props => {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    background: `rgba(${rgbValues}, 0.5)`,
+    background: theme.palette.background.default,
+    opacity: '0.99',
     padding: '0.5rem 1rem',
     borderRadius: 20,
     marginTop: '1rem',

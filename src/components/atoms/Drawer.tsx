@@ -1,10 +1,8 @@
 import { ButtonProps } from '@mui/material/Button'
-import { IconButtonProps } from '@mui/material'
-import dynamic from 'next/dynamic'
-import React from 'react'
+import Drawer from '@mui/material/Drawer'
+import { IconButtonProps } from '@mui/material/IconButton'
 import { useRouter } from 'next/router'
-
-const Drawer = dynamic(async () => await import('@mui/material/Drawer'))
+import React from 'react'
 
 interface Props {
   anchor: 'top' | 'bottom' | 'left' | 'right'

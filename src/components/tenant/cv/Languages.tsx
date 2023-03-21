@@ -1,18 +1,14 @@
 import { SxProps } from '@mui/material/styles'
 import { Translate } from 'next-translate'
-import dynamic from 'next/dynamic'
-
-const GridBox = dynamic(async () => await import('@/components/atoms/GridBox'))
-const FlexBox = dynamic(async () => await import('@/components/atoms/FlexBox'))
-const List = dynamic(async () => await import('@mui/material/List'))
-const ListItem = dynamic(async () => await import('@mui/material/ListItem'))
-const ListItemText = dynamic(async () => await import('@mui/material/ListItemText'))
-const Typography = dynamic(async () => await import('@mui/material/Typography'))
-const CheckIcon = dynamic(async () => await import('@mui/icons-material/Check'))
-const CustomLink = dynamic(async () => await import('@/components/atoms/CustomLink'))
+import CheckIcon from '@mui/icons-material/Check'
+import Typography from '@mui/material/Typography'
+import CustomLink from '@/components/atoms/CustomLink'
+import FlexBox from '@/components/atoms/FlexBox'
+import GridBox from '@/components/atoms/GridBox'
+import { List, ListItem, ListItemText } from '@mui/material'
 
 const SmallCheckIcon = (): JSX.Element => {
-  return <CheckIcon fontSize='small' sx={{ mt: 1 }} />
+  return <CheckIcon fontSize='small' sx={{ mt: 1 }} color='secondary' />
 }
 
 interface Body2Props {
@@ -22,7 +18,7 @@ interface Body2Props {
 
 const Body2: React.FC<Body2Props> = (props): JSX.Element => {
   return (
-    <Typography variant='body2' color='gray' sx={props.sx}>
+    <Typography variant='body2' color='text.secondary' sx={props.sx}>
       {props.children}
     </Typography>
   )
@@ -49,7 +45,6 @@ const Languages: React.FC<LanguagesProps> = (props): JSX.Element => {
             <SmallCheckIcon />
             <GridBox>
               <ListItemText
-                disableTypography
                 sx={{ mt: 1 }}
                 primary='English'
                 secondary={

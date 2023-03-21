@@ -1,15 +1,13 @@
 import { ButtonProps } from '@mui/material/Button/Button'
 import { IconButtonProps } from '@mui/material/IconButton/IconButton'
 import React from 'react'
-import dynamic from 'next/dynamic'
 import MenuItem from '@mui/material/MenuItem'
+import Menu from '@mui/material/Menu'
 
 interface DialogMenuProps {
   children: React.ReactNode
   ActivateDialogButton: React.ReactElement<ButtonProps | IconButtonProps>
 }
-
-const Menu = dynamic(async () => await import('@mui/material/Menu'))
 
 const DialogMenu: React.FC<DialogMenuProps> = props => {
   const { children, ActivateDialogButton } = props
@@ -39,7 +37,7 @@ const DialogMenu: React.FC<DialogMenuProps> = props => {
         anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
         transformOrigin={{ vertical: 'bottom', horizontal: 'center' }}
       >
-        <MenuItem>{children}</MenuItem>
+        <MenuItem data-test-id='menu-item-dialog'>{children}</MenuItem>
       </Menu>
     </div>
   )

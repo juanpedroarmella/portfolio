@@ -1,26 +1,18 @@
+import CenterContainer from '@/components/atoms/CenterContainer'
+import Education from '@/components/tenant/cv/Education'
+import Experience from '@/components/tenant/cv/Experience'
+import Languages from '@/components/tenant/cv/Languages'
+import MainTitle from '@/components/tenant/cv/MainTitle'
+import Profile from '@/components/tenant/cv/Profile'
+import Technologies from '@/components/tenant/cv/Technologies'
 import useTranslation from 'next-translate/useTranslation'
-import dynamic from 'next/dynamic'
-
-const CenterContainer = dynamic(
-  async () => await import('@/components/atoms/CenterContainer')
-)
-const MainTitle = dynamic(async () => await import('@/components/tenant/cv/MainTitle'))
-const Profile = dynamic(async () => await import('@/components/tenant/cv/Profile'))
-const Experience = dynamic(async () => await import('@/components/tenant/cv/Experience'))
-const Education = dynamic(async () => await import('@/components/tenant/cv/Education'))
-const Technologies = dynamic(
-  async () => await import('@/components/tenant/cv/Technologies')
-)
-const Languages = dynamic(async () => await import('@/components/tenant/cv/Languages'))
-
-const GridBox = dynamic(async () => await import('@/components/atoms/GridBox'))
 
 const Cv: React.FC = () => {
   const { t } = useTranslation('cv')
   return (
     <CenterContainer direction='column' gap={8}>
       <MainTitle />
-      <GridBox gap={5}>
+      <CenterContainer direction='column' withpadding='true' gap={5} sx={{ marginTop: 0 }}>
         <Profile t={t} />
         <Experience t={t} />
         <Education t={t} />
@@ -29,7 +21,7 @@ const Cv: React.FC = () => {
         {/* <OtherSkills />
 
       */}
-      </GridBox>
+      </CenterContainer>
     </CenterContainer>
   )
 }

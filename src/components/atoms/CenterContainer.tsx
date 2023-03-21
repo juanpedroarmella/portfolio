@@ -1,20 +1,27 @@
-import styled from '@emotion/styled'
-import dynamic from 'next/dynamic'
+import useIsMobile from '@/hooks/useIsMobile'
+import Box from '@mui/material/Box'
+import { styled } from '@mui/material/styles'
 
-const Box = dynamic(async () => await import('@mui/material/Box'))
-
-const Container = styled(Box)({
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center'
-})
-
-interface CenterContainerProps {
+interface ContainerProps {
+  withpadding?: string
   direction?: 'row' | 'column'
 }
 
-const CenterContainer = styled(Container)<CenterContainerProps>(({ direction }) => ({
-  flexDirection: direction ?? 'row'
-}))
+const CenterContainer = styled(Box)<ContainerProps>(props => {
+  const isMobile = useIsMobile()
+  const { withpadding = false, direction = 'row' } = props
+  return {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: direction,
+    ...(Boolean(withpadding) && {
+      paddingLeft: isMobile ? '7%' : '10vw',
+      paddingRight: isMobile ? '7%' : '10vw',
+      marginTop: isMobile ? '3rem' : '5rem',
+      paddingTop: '2rem'
+    })
+  }
+})
 
 export default CenterContainer
