@@ -1,5 +1,6 @@
 import CenterContainer from '@/components/atoms/CenterContainer'
 import ScrollDownIndicator from '@/components/atoms/ScrollDownIndicator'
+import useSpacing from '@/hooks/useSpacing'
 import theme from '@/styles/theme'
 import { Typography } from '@mui/material'
 import { styled } from '@mui/material/styles'
@@ -15,9 +16,10 @@ const Container = styled(CenterContainer)({
 })
 
 const MainTitle: React.FC = () => {
+  const spacing = useSpacing()
   return (
-    <Container direction='column' gap={4} withpadding='true'>
-      <CenterContainer direction='column' gap={4} width='80%'>
+    <Container direction='column' gap={4}>
+      <CenterContainer {...spacing} direction='column' gap={4} width='80%'>
         <Image
           src='/profile.jpg'
           alt='Foto de perfil Juan Pedro Armella'

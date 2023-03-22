@@ -3,26 +3,21 @@ import Education from '@/components/tenant/cv/Education';
 import Experience from '@/components/tenant/cv/Experience';
 import Languages from '@/components/tenant/cv/Languages';
 import MainTitle from '@/components/tenant/cv/MainTitle';
+import Profile from '@/components/tenant/cv/Profile';
 import Technologies from '@/components/tenant/cv/Technologies';
 import useTranslation from 'next-translate/useTranslation';
 
 const Cv: React.FC = () => {
   const { t } = useTranslation('cv');
   return (
-    <CenterContainer direction="column" gap={8}>
+    <CenterContainer direction="column">
       <MainTitle />
-      <CenterContainer
-        direction="column"
-        withpadding="true"
-        gap={5}
-        sx={{ marginTop: 0 }}
-      >
-        <Experience t={t} />
-        <Education t={t} />
-        <Technologies t={t} />
-        <Languages t={t} />
-        {/* <OtherSkills /> */}
-      </CenterContainer>
+      <Profile t={t} />
+      <Experience t={t} />
+      <Education t={t} />
+      <Technologies t={t} />
+      <Languages t={t} />
+      {/* <OtherSkills /> */}
     </CenterContainer>
   );
 };

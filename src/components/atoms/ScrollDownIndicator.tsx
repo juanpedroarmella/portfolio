@@ -10,7 +10,7 @@ const ScrollDownIndicator: React.FC = () => {
 
   const handleClick = React.useCallback((): void => {
     window.scrollTo({
-      top: window.innerHeight,
+      top: window.innerHeight - 50,
       behavior: 'smooth'
     })
   }, [])

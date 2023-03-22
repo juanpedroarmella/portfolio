@@ -1,31 +1,29 @@
-import styled from '@emotion/styled'
-import { Theme } from '@mui/material/styles'
-import React from 'react'
-import CenterContainer from '../atoms/CenterContainer'
-import Footer from './footer/Footer'
-import Header from './header/Header'
+import styled from '@emotion/styled';
+import { Theme } from '@mui/material/styles';
+import React from 'react';
+import CenterContainer from '../atoms/CenterContainer';
+import Header from './header/Header';
 
-const LayoutContent = styled(CenterContainer)<{ theme?: Theme }>(props => {
+const LayoutContent = styled(CenterContainer)<{ theme?: Theme }>((props) => {
   return {
     minHeight: '90vh',
-    paddingBottom: '2rem',
     width: '100%',
-    background: props.theme.palette.background.paper
-  }
-})
+    background: props.theme.palette.background.paper,
+  };
+});
 
 interface LayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = props => {
-  const { children } = props
+const Layout: React.FC<LayoutProps> = (props) => {
+  const { children } = props;
   return (
-    <CenterContainer direction='column'>
+    <CenterContainer direction="column">
       <Header />
-      <LayoutContent direction='column'>{children}</LayoutContent>
-      <Footer />
+      <LayoutContent direction="column">{children}</LayoutContent>
+      {/* <Footer /> */}
     </CenterContainer>
-  )
-}
-export default Layout
+  );
+};
+export default Layout;

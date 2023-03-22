@@ -5,7 +5,10 @@ import Typography from '@mui/material/Typography'
 import CustomLink from '@/components/atoms/CustomLink'
 import FlexBox from '@/components/atoms/FlexBox'
 import GridBox from '@/components/atoms/GridBox'
-import { List, ListItem, ListItemText } from '@mui/material'
+import { List, ListItem, ListItemText, styled } from '@mui/material'
+import useSpacing from '@/hooks/useSpacing'
+import CenterContainer from '@/components/atoms/CenterContainer'
+import WithUnderline from '@/components/atoms/WithUnderline'
 
 const SmallCheckIcon = (): JSX.Element => {
   return <CheckIcon fontSize='small' sx={{ mt: 1 }} color='secondary' />
@@ -28,16 +31,29 @@ interface LanguagesProps {
   t: Translate
 }
 
+const ProfileContainer = styled(CenterContainer)(({ theme }) => {
+  return {
+    gap: '2rem',
+    background: theme.palette.background.default,
+    alignItems: 'flex-start',
+    width: '100%'
+  }
+})
+
 const Languages: React.FC<LanguagesProps> = (props): JSX.Element => {
   const { t } = props
+  const spacing = useSpacing()
   return (
-    <GridBox gap={2} width='100%'>
-      <Typography variant='h3'>{t('languages.title')}</Typography>
+    <ProfileContainer direction='column' {...spacing}>
+      <WithUnderline variant='h3'>{t('languages.title')}</WithUnderline>
       <List>
         <ListItem disablePadding>
           <FlexBox gap={1}>
             <SmallCheckIcon />
-            <ListItemText primary={t('languages.spanish')} secondary={t('languages.native')} />
+            <ListItemText
+              primary={t('languages.spanish')}
+              secondary={t('languages.native')}
+            />
           </FlexBox>
         </ListItem>
         <ListItem disablePadding>
@@ -54,7 +70,10 @@ const Languages: React.FC<LanguagesProps> = (props): JSX.Element => {
                     <Body2>Reading - C2 Proficient</Body2>
                     <Body2>Listening - B2 Upper Intermediate</Body2>
                     <Body2 sx={{ textDecoration: 'underline' }}>
-                      <CustomLink href='https://www.efset.org/cert/4funib' target='_blank'>
+                      <CustomLink
+                        href='https://www.efset.org/cert/4funib'
+                        target='_blank'
+                      >
                         Test EF
                       </CustomLink>
                     </Body2>
@@ -65,7 +84,7 @@ const Languages: React.FC<LanguagesProps> = (props): JSX.Element => {
           </FlexBox>
         </ListItem>
       </List>
-    </GridBox>
+    </ProfileContainer>
   )
 }
 export default Languages

@@ -11,7 +11,7 @@ const FooterWrapper = styled('footer')(({ theme }: { theme?: Theme }) => {
     alignItems: 'center',
     borderTop: '2px solid rgba(0, 0, 0, 0.14)',
     boxShadow: '0px 4px 8px -4px rgba(0, 0, 0, 0.4)',
-    background: theme?.palette.background.default
+    background: theme?.palette.background.paper
   }
 })
 

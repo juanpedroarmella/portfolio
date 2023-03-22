@@ -15,7 +15,7 @@ const typography = {
     color: palette.text.primary
   },
   h3: {
-    fontSize: '1.75rem',
+    fontSize: '1.85rem',
     fontWeight: 500,
     lineHeight: 1.3,
     color: palette.text.primary

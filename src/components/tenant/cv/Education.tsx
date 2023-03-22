@@ -7,21 +7,38 @@ import Typography from '@mui/material/Typography'
 import List from '@mui/material/List'
 import ListItemText from '@mui/material/ListItemText'
 import ListItem from '@mui/material/ListItem'
+import useSpacing from '@/hooks/useSpacing'
+import { styled } from '@mui/material'
+import WithUnderline from '@/components/atoms/WithUnderline'
 
 interface EducationProps {
   t: Translate
 }
 
-const Education: React.FC<EducationProps> = props => {
+const EducationContainer = styled(CenterContainer)(({ theme }) => {
+  return {
+    gap: '2rem',
+    background: theme.palette.background.default,
+    alignItems: 'flex-start'
+  }
+})
+
+const Education: React.FC<EducationProps> = (props) => {
   const { t } = props
-  const arrKnowledge = React.useMemo(() => t('education.knowledge.list', {}, { returnObjects: true }) as [], [t])
+  const arrKnowledge = React.useMemo(
+    () => t('education.knowledge.list', {}, { returnObjects: true }) as [],
+    [t]
+  )
+  const spacing = useSpacing()
   return (
-    <GridBox gap={2} width='100%'>
-      <Typography variant='h3'>{t('education.title')}</Typography>
+    <EducationContainer gap={2} width='100%' direction='column' {...spacing}>
+      <WithUnderline variant='h3'>{t('education.title')}</WithUnderline>
       <Typography variant='h5'>{t('education.career')}</Typography>
       <Typography variant='h6'>{t('education.university')}</Typography>
       <GridBox gap={1}>
-        <Typography variant='body1'>{t('education.knowledge.title')}</Typography>
+        <Typography variant='body1'>
+          {t('education.knowledge.title')}
+        </Typography>
         <List>
           {arrKnowledge.map((task: string, index: number) => (
             <ListItem disablePadding key={index}>
@@ -33,7 +50,7 @@ const Education: React.FC<EducationProps> = props => {
           ))}
         </List>
       </GridBox>
-    </GridBox>
+    </EducationContainer>
   )
 }
 export default Education
