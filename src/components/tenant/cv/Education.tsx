@@ -31,11 +31,18 @@ const Education: React.FC<EducationProps> = (props) => {
   )
   const spacing = useSpacing()
   return (
-    <EducationContainer gap={2} width='100%' direction='column' {...spacing}>
+    <EducationContainer
+      gap={2}
+      width='100%'
+      direction='column'
+      {...spacing}
+      data-test-id='education-container'
+      component='article'
+    >
       <WithUnderline variant='h3'>{t('education.title')}</WithUnderline>
       <Typography variant='h5'>{t('education.career')}</Typography>
       <Typography variant='h6'>{t('education.university')}</Typography>
-      <GridBox gap={1}>
+      <GridBox gap={1} data-test-id='knowledge-container' component='section'>
         <Typography variant='body1'>
           {t('education.knowledge.title')}
         </Typography>

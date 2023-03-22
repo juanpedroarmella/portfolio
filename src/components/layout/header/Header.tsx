@@ -10,7 +10,11 @@ const Header = (): JSX.Element => {
   if (isMobile) return <MobileHeader />
 
   return (
-    <HeaderWrapper component='header' mx='5%'>
+    <HeaderWrapper
+      component='header'
+      mx='5%'
+      data-test-id='desktop-header-main-container'
+    >
       <Nav />
       <Settings />
     </HeaderWrapper>

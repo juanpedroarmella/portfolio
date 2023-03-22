@@ -1,4 +1,5 @@
 import CenterContainer from '@/components/atoms/CenterContainer'
+import Meta from '@/components/atoms/Meta'
 import Education from '@/components/tenant/cv/Education'
 import Experience from '@/components/tenant/cv/Experience'
 import Languages from '@/components/tenant/cv/Languages'
@@ -10,7 +11,12 @@ import useTranslation from 'next-translate/useTranslation'
 const Cv: React.FC = () => {
   const { t } = useTranslation('cv')
   return (
-    <CenterContainer direction='column'>
+    <CenterContainer
+      data-test-id='cv-container'
+      component='article'
+      direction='column'
+    >
+      <Meta t={t} />
       <MainTitle />
       <Profile t={t} />
       <Experience t={t} />

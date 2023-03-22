@@ -12,7 +12,12 @@ const Technologies: React.FC<TechnologiesProps> = (props) => {
   const { t } = props
   const spacing = useSpacing()
   return (
-    <GridBox gap={5} {...spacing}>
+    <GridBox
+      gap={5}
+      {...spacing}
+      component='article'
+      data-test-id='technologies-main-container'
+    >
       <Typography variant='h3'>{t('technologies')}</Typography>
       <TechnologiesList />
     </GridBox>

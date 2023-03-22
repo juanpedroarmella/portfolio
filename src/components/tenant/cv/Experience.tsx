@@ -20,17 +20,27 @@ const Experience: React.FC<ExperienceProps> = (props) => {
   )
   const spacing = useSpacing()
   return (
-    <GridBox gap={2} width='100%' {...spacing}>
+    <GridBox
+      gap={2}
+      width='100%'
+      {...spacing}
+      data-test-id='experience-container'
+      component='article'
+    >
       <Typography variant='h3'>{t('experience.title')}</Typography>
       <Typography variant='h5'>{t('experience.company')}</Typography>
       <Typography variant='h6'>{t('experience.position')}</Typography>
-      <GridBox gap={1}>
+      <GridBox
+        gap={1}
+        data-test-id='experience-tasks-container'
+        component='section'
+      >
         <Typography variant='body1'>{t('experience.description')}</Typography>
         <Typography variant='body1'>{t('experience.tasks.title')}</Typography>
         <List disablePadding>
           {arrTasks.map((task: string, index: number) => (
             <ListItem disablePadding key={index}>
-              <CenterContainer gap={1}>
+              <CenterContainer gap={1} data-test-id={`container-task-${index}`}>
                 <CheckIcon fontSize='small' color='secondary' />
                 <ListItemText primary={task} />
               </CenterContainer>

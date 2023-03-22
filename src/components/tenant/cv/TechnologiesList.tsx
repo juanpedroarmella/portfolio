@@ -26,9 +26,16 @@ const techImages = requireTechImages
 
 const TechnologiesList: React.FC = () => {
   return (
-    <CenterContainer direction='row' flexWrap='wrap' gap={3}>
+    <CenterContainer
+      direction='row'
+      flexWrap='wrap'
+      gap={3}
+      component='ul'
+      data-test-id='technologies-list-container'
+      p={0}
+    >
       {techImages.map((tech: { path: string, name: string }, index: number) => (
-        <GridBox gap={1} justifyItems='center' key={index}>
+        <GridBox component='li' gap={1} justifyItems='center' key={index}>
           <Image src={'/' + tech.path} alt={tech.name} width={64} height={64} />
           <Typography variant='h5'>{tech.name}</Typography>
         </GridBox>

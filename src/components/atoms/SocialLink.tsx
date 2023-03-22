@@ -12,7 +12,11 @@ interface SocialLinkProps {
 
 const SocialLink: React.FC<SocialLinkProps> = (props) => {
   return (
-    <CenterContainer gap={2} flexWrap='wrap'>
+    <CenterContainer
+      gap={2}
+      flexWrap='wrap'
+      data-test-id='social-link-container'
+    >
       <Image src={props.iconSrc} alt={props.iconAlt} width={40} height={40} />
       <CustomLink href={props.href} target='_blank'>
         <Typography

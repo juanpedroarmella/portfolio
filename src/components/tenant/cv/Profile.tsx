@@ -21,7 +21,12 @@ const Profile: React.FC<ProfileProps> = (props) => {
   const { t } = props
   const spacing = useSpacing()
   return (
-    <ProfileContainer direction='column' {...spacing}>
+    <ProfileContainer
+      direction='column'
+      {...spacing}
+      data-test-id='about-me-container'
+      component='article'
+    >
       <WithUnderline variant='h3'>About me</WithUnderline>
       <Typography variant='body1'>{t('profile.text')}</Typography>
     </ProfileContainer>

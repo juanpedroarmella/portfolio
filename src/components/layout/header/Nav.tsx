@@ -18,7 +18,11 @@ interface NavProps {
 const Nav: React.FC<NavProps> = (props) => {
   const { t } = useTranslation('common')
   return (
-    <Container flexDirection={props.direction ?? 'row'} component='nav'>
+    <Container
+      flexDirection={props.direction ?? 'row'}
+      component='nav'
+      data-test-id='navigation-buttons-container'
+    >
       <NavigationButton
         href='/cv'
         text={t('nav-cv')}

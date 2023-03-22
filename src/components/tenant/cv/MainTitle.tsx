@@ -18,8 +18,15 @@ const Container = styled(CenterContainer)({
 const MainTitle: React.FC = () => {
   const spacing = useSpacing()
   return (
-    <Container direction='column' gap={4}>
-      <CenterContainer {...spacing} direction='column' gap={4} width='80%'>
+    <Container direction='column' gap={4} data-test-id='main-title-container'>
+      <CenterContainer
+        {...spacing}
+        direction='column'
+        gap={4}
+        width='80%'
+        data-test-id='profile-container'
+        component='article'
+      >
         <Image
           src='/profile.jpg'
           alt='Foto de perfil Juan Pedro Armella'

@@ -28,7 +28,7 @@ const Settings: React.FC = () => {
   )
 
   const desktopIconButton = (
-    <IconButton>
+    <IconButton aria-label='Open settings'>
       <SettingsIcon
         data-test-id='desktop-button-nav-settings'
         color='secondary'

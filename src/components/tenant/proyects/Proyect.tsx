@@ -12,10 +12,21 @@ interface Props {
 
 const Proyect: React.FC<Props> = (props) => {
   return (
-    <FlexBox flexDirection='column' gap={2}>
+    <FlexBox
+      component='li'
+      data-test-id='proyect-container'
+      flexDirection='column'
+      mb={2}
+      gap={2}
+    >
       <Typography variant='h4'>{props.title}</Typography>
       <Typography variant='body1'>{props.description}</Typography>
-      <Button variant='contained' size='small' sx={{ width: 'fit-content' }}>
+      <Button
+        variant='contained'
+        size='small'
+        sx={{ width: 'fit-content' }}
+        aria-label='Go to proyect button'
+      >
         <a href={props.href} target='_blank' rel='noreferrer'>
           {props.linkText}
         </a>

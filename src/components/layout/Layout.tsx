@@ -16,9 +16,19 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = (props) => {
   const { children } = props
   return (
-    <CenterContainer direction='column'>
-      <Header />
-      <LayoutContent direction='column'>{children}</LayoutContent>
+    <CenterContainer
+      direction='column'
+      component='article'
+      data-test-id='layout-container'
+    >
+      <Header data-test-id='header-container' />
+      <LayoutContent
+        component='section'
+        data-test-id='layout-content'
+        direction='column'
+      >
+        {children}
+      </LayoutContent>
       {/* <Footer /> */}
     </CenterContainer>
   )

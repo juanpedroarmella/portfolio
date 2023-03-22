@@ -30,6 +30,7 @@ const DialogMenu: React.FC<DialogMenuProps> = (props) => {
         onClick: handleClick
       })}
       <Menu
+        data-test-id='material-menu'
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}

@@ -27,16 +27,24 @@ const ElementsWrapper = styled(FlexBox)({
 
 const MobileHeader = (): JSX.Element => {
   return (
-    <MobileHeaderWrapper component='header' mx='2%'>
+    <MobileHeaderWrapper
+      component='header'
+      mx='2%'
+      data-test-id='mobile-header-main-container'
+    >
       <Drawer
+        data-test-id='mobile-drawer'
         anchor='left'
         ActivateDrawerButton={
-          <IconButton>
+          <IconButton aria-label='open-mobile-drawer-navigation'>
             <MenuIcon color='secondary' />
           </IconButton>
         }
       >
-        <ElementsWrapper>
+        <ElementsWrapper
+          component='section'
+          data-test-id='nav-buttons-container'
+        >
           <Nav direction='column' />
           <Settings />
         </ElementsWrapper>

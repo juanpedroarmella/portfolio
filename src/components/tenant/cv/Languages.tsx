@@ -34,7 +34,7 @@ interface LanguagesProps {
   t: Translate
 }
 
-const ProfileContainer = styled(CenterContainer)(({ theme }) => {
+const LanguagesContainer = styled(CenterContainer)(({ theme }) => {
   return {
     gap: '2rem',
     background: theme.palette.background.default,
@@ -47,9 +47,14 @@ const Languages: React.FC<LanguagesProps> = (props): JSX.Element => {
   const { t } = props
   const spacing = useSpacing()
   return (
-    <ProfileContainer direction='column' {...spacing}>
+    <LanguagesContainer
+      data-test-id='languages-main-container'
+      component='article'
+      direction='column'
+      {...spacing}
+    >
       <WithUnderline variant='h3'>{t('languages.title')}</WithUnderline>
-      <List>
+      <List data-test-id='languages-list-container'>
         <ListItem disablePadding>
           <FlexBox gap={1}>
             <SmallCheckIcon />
@@ -87,7 +92,7 @@ const Languages: React.FC<LanguagesProps> = (props): JSX.Element => {
           </FlexBox>
         </ListItem>
       </List>
-    </ProfileContainer>
+    </LanguagesContainer>
   )
 }
 export default Languages
