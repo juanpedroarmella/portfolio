@@ -1,18 +1,18 @@
-import { ButtonProps } from '@mui/material/Button/Button'
-import { IconButtonProps } from '@mui/material/IconButton/IconButton'
-import React from 'react'
+import type { ButtonProps } from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
 import Menu from '@mui/material/Menu'
+import type { IconButtonProps } from '@mui/material/IconButton'
+import { cloneElement, useState } from 'react'
 
 interface DialogMenuProps {
   children: React.ReactNode
   ActivateDialogButton: React.ReactElement<ButtonProps | IconButtonProps>
 }
 
-const DialogMenu: React.FC<DialogMenuProps> = props => {
+const DialogMenu: React.FC<DialogMenuProps> = (props) => {
   const { children, ActivateDialogButton } = props
 
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
 
   const open = Boolean(anchorEl)
 
@@ -26,7 +26,7 @@ const DialogMenu: React.FC<DialogMenuProps> = props => {
 
   return (
     <div>
-      {React.cloneElement(ActivateDialogButton, {
+      {cloneElement(ActivateDialogButton, {
         onClick: handleClick
       })}
       <Menu

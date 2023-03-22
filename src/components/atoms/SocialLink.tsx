@@ -1,6 +1,6 @@
+import Typography from '@mui/material/Typography'
 import Image from 'next/image'
 import CenterContainer from './CenterContainer'
-import { Typography } from '@mui/material'
 import CustomLink from './CustomLink'
 
 interface SocialLinkProps {
@@ -10,12 +10,16 @@ interface SocialLinkProps {
   text: string
 }
 
-const SocialLink: React.FC<SocialLinkProps> = props => {
+const SocialLink: React.FC<SocialLinkProps> = (props) => {
   return (
     <CenterContainer gap={2} flexWrap='wrap'>
       <Image src={props.iconSrc} alt={props.iconAlt} width={40} height={40} />
       <CustomLink href={props.href} target='_blank'>
-        <Typography variant='overline' color='text.primary' sx={{ textDecoration: 'underline' }}>
+        <Typography
+          variant='overline'
+          color='text.primary'
+          sx={{ textDecoration: 'underline' }}
+        >
           {props.text}
         </Typography>
       </CustomLink>

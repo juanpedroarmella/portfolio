@@ -1,8 +1,9 @@
 import CenterContainer from '@/components/atoms/CenterContainer'
 import WithUnderline from '@/components/atoms/WithUnderline'
 import useSpacing from '@/hooks/useSpacing'
-import { styled, Typography } from '@mui/material'
-import { Translate } from 'next-translate'
+import { styled } from '@mui/material/styles'
+import Typography from '@mui/material/Typography'
+import type { Translate } from 'next-translate'
 
 interface ProfileProps {
   t: Translate

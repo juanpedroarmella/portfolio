@@ -1,14 +1,15 @@
 import useScrollDownIndicator from '@/hooks/useScrollDownIndicator'
-import { ArrowDownward } from '@mui/icons-material'
+import ArrowDownward from '@mui/icons-material/ArrowDownward'
 import IconButton from '@mui/material/IconButton'
 import Slide from '@mui/material/Slide'
 import { keyframes, styled } from '@mui/material/styles'
-import React from 'react'
+
+import { useCallback } from 'react'
 
 const ScrollDownIndicator: React.FC = () => {
   const visible = useScrollDownIndicator()
 
-  const handleClick = React.useCallback((): void => {
+  const handleClick = useCallback((): void => {
     window.scrollTo({
       top: window.innerHeight - 50,
       behavior: 'smooth'

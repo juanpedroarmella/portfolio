@@ -1,4 +1,4 @@
-import { SystemProps } from '@mui/system'
+import type { SystemProps } from '@mui/system'
 import useIsMobile from './useIsMobile'
 
 const useSpacing = (): SystemProps => {

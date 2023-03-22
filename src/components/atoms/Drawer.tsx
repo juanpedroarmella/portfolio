@@ -1,8 +1,8 @@
-import { ButtonProps } from '@mui/material/Button'
+import type { ButtonProps } from '@mui/material/Button'
 import Drawer from '@mui/material/Drawer'
-import { IconButtonProps } from '@mui/material/IconButton'
+import type { IconButtonProps } from '@mui/material/IconButton'
 import { useRouter } from 'next/router'
-import React from 'react'
+import { cloneElement, Fragment, useEffect, useState } from 'react'
 
 interface Props {
   anchor: 'top' | 'bottom' | 'left' | 'right'
@@ -10,8 +10,8 @@ interface Props {
   children: React.ReactNode
 }
 
-const TemporaryDrawer: React.FC<Props> = props => {
-  const [state, setState] = React.useState({
+const TemporaryDrawer: React.FC<Props> = (props) => {
+  const [state, setState] = useState({
     top: false,
     left: false,
     bottom: false,
@@ -19,20 +19,22 @@ const TemporaryDrawer: React.FC<Props> = props => {
   })
 
   const toggleDrawer =
-    (anchor: typeof props.anchor, open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
-      if (
-        event.type === 'keydown' &&
-        ((event as React.KeyboardEvent).key === 'Tab' || (event as React.KeyboardEvent).key === 'Shift')
-      ) {
-        return
-      }
+    (anchor: typeof props.anchor, open: boolean) =>
+      (event: React.KeyboardEvent | React.MouseEvent) => {
+        if (
+          event.type === 'keydown' &&
+        ((event as React.KeyboardEvent).key === 'Tab' ||
+          (event as React.KeyboardEvent).key === 'Shift')
+        ) {
+          return
+        }
 
-      setState({ ...state, [anchor]: open })
-    }
+        setState({ ...state, [anchor]: open })
+      }
 
   const router = useRouter()
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleRouteChange = (): void => {
       setState({ ...state, [props.anchor]: false })
     }
@@ -44,14 +46,18 @@ const TemporaryDrawer: React.FC<Props> = props => {
 
   return (
     <>
-      <React.Fragment key={props.anchor}>
-        {React.cloneElement(props.ActivateDrawerButton, {
+      <Fragment key={props.anchor}>
+        {cloneElement(props.ActivateDrawerButton, {
           onClick: toggleDrawer(props.anchor, true)
         })}
-        <Drawer anchor={props.anchor} open={state[props.anchor]} onClose={toggleDrawer(props.anchor, false)}>
+        <Drawer
+          anchor={props.anchor}
+          open={state[props.anchor]}
+          onClose={toggleDrawer(props.anchor, false)}
+        >
           {props.children}
         </Drawer>
-      </React.Fragment>
+      </Fragment>
     </>
   )
 }

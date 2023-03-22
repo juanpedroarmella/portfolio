@@ -1,4 +1,4 @@
-import { styled } from '@mui/material'
+import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
 
 const WithUnderline = styled(Typography)(({ theme }) => {

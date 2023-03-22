@@ -1,12 +1,7 @@
-import styled from '@emotion/styled'
-import { Box, Theme } from '@mui/material'
+import Box from '@mui/material/Box'
+import { styled } from '@mui/material/styles'
 
-interface HeaderWrapperProps {
-  theme?: Theme
-}
-
-const HeaderWrapper = styled(Box)<HeaderWrapperProps>((props) => {
-  const { theme } = props
+const HeaderWrapper = styled(Box)(({ theme }) => {
   return {
     position: 'fixed',
     top: 0,

@@ -1,5 +1,6 @@
 import FlexBox from '@/components/atoms/FlexBox'
-import { Button, Typography } from '@mui/material'
+import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
 
 interface Props {
   title: string
@@ -9,7 +10,7 @@ interface Props {
   linkText: string
 }
 
-const Proyect: React.FC<Props> = props => {
+const Proyect: React.FC<Props> = (props) => {
   return (
     <FlexBox flexDirection='column' gap={2}>
       <Typography variant='h4'>{props.title}</Typography>

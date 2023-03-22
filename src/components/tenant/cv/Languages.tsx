@@ -1,14 +1,17 @@
-import { SxProps } from '@mui/material/styles'
-import { Translate } from 'next-translate'
+import type { Translate } from 'next-translate'
 import CheckIcon from '@mui/icons-material/Check'
 import Typography from '@mui/material/Typography'
 import CustomLink from '@/components/atoms/CustomLink'
 import FlexBox from '@/components/atoms/FlexBox'
 import GridBox from '@/components/atoms/GridBox'
-import { List, ListItem, ListItemText, styled } from '@mui/material'
 import useSpacing from '@/hooks/useSpacing'
 import CenterContainer from '@/components/atoms/CenterContainer'
 import WithUnderline from '@/components/atoms/WithUnderline'
+import { styled } from '@mui/material/styles'
+import type { SxProps } from '@mui/material/styles'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemText from '@mui/material/ListItemText'
 
 const SmallCheckIcon = (): JSX.Element => {
   return <CheckIcon fontSize='small' sx={{ mt: 1 }} color='secondary' />

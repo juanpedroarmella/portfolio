@@ -1,17 +1,20 @@
 import CenterContainer from '@/components/atoms/CenterContainer'
 import GridBox from '@/components/atoms/GridBox'
-import { Typography, List, ListItem, ListItemText } from '@mui/material'
-import { Translate } from 'next-translate'
-import React from 'react'
+import type { Translate } from 'next-translate'
 import CheckIcon from '@mui/icons-material/Check'
 import useSpacing from '@/hooks/useSpacing'
+import Typography from '@mui/material/Typography'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemText from '@mui/material/ListItemText'
+import { useMemo } from 'react'
 interface ExperienceProps {
   t: Translate
 }
 
 const Experience: React.FC<ExperienceProps> = (props) => {
   const { t } = props
-  const arrTasks = React.useMemo(
+  const arrTasks = useMemo(
     () => t('experience.tasks.list', {}, { returnObjects: true }) as [],
     [t]
   )

@@ -1,6 +1,6 @@
 import CenterContainer from '@/components/atoms/CenterContainer'
 import GridBox from '@/components/atoms/GridBox'
-import { Typography } from '@mui/material'
+import Typography from '@mui/material/Typography'
 import { capitalize } from '@mui/material/utils'
 import Image from 'next/image'
 

@@ -3,7 +3,7 @@ import FlexBox from '@/components/atoms/FlexBox'
 import SocialLink from '@/components/atoms/SocialLink'
 import useIsMobile from '@/hooks/useIsMobile'
 import useSpacing from '@/hooks/useSpacing'
-import { Typography } from '@mui/material'
+import Typography from '@mui/material/Typography'
 import useTranslation from 'next-translate/useTranslation'
 
 const Contact: React.FC = () => {

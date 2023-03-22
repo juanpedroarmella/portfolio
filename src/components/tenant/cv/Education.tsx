@@ -1,15 +1,15 @@
 import CenterContainer from '@/components/atoms/CenterContainer'
 import GridBox from '@/components/atoms/GridBox'
-import { Translate } from 'next-translate'
-import React from 'react'
 import CheckIcon from '@mui/icons-material/Check'
 import Typography from '@mui/material/Typography'
 import List from '@mui/material/List'
 import ListItemText from '@mui/material/ListItemText'
 import ListItem from '@mui/material/ListItem'
 import useSpacing from '@/hooks/useSpacing'
-import { styled } from '@mui/material'
 import WithUnderline from '@/components/atoms/WithUnderline'
+import { styled } from '@mui/material/styles'
+import type { Translate } from 'next-translate'
+import { useMemo } from 'react'
 
 interface EducationProps {
   t: Translate
@@ -25,7 +25,7 @@ const EducationContainer = styled(CenterContainer)(({ theme }) => {
 
 const Education: React.FC<EducationProps> = (props) => {
   const { t } = props
-  const arrKnowledge = React.useMemo(
+  const arrKnowledge = useMemo(
     () => t('education.knowledge.list', {}, { returnObjects: true }) as [],
     [t]
   )

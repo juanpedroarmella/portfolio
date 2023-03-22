@@ -1,14 +1,12 @@
 import FlexBox from '@/components/atoms/FlexBox'
-import styled from '@emotion/styled'
 import HeaderWrapper from './HeaderWrapper'
 import Nav from './Nav'
 import MenuIcon from '@mui/icons-material/Menu'
 import Drawer from '@/components/atoms/Drawer'
 import IconButton from '@mui/material/IconButton'
-import { Theme } from '@mui/material/styles'
 import Settings from '@/components/settings/Settings'
-
-const MobileHeaderWrapper = styled(HeaderWrapper)(({ theme }: { theme?: Theme }) => {
+import { styled } from '@mui/material/styles'
+const MobileHeaderWrapper = styled(HeaderWrapper)(() => {
   return {
     marginTop: '.5rem',
     width: '96%'

@@ -1,8 +1,7 @@
-import styled from '@emotion/styled'
-import { Typography } from '@mui/material'
-import { Theme } from '@mui/material/styles'
+import { styled } from '@mui/material/styles'
+import Typography from '@mui/material/Typography'
 
-const FooterWrapper = styled('footer')(({ theme }: { theme?: Theme }) => {
+const FooterWrapper = styled('footer')(({ theme }) => {
   return {
     display: 'flex',
     justifyContent: 'center',

@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material'
+import Typography from '@mui/material/Typography'
 import useTranslation from 'next-translate/useTranslation'
 
 const Home: React.FC = () => {

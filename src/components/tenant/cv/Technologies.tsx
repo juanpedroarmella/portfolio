@@ -1,7 +1,7 @@
 import GridBox from '@/components/atoms/GridBox'
 import useSpacing from '@/hooks/useSpacing'
-import { Typography } from '@mui/material'
-import { Translate } from 'next-translate'
+import Typography from '@mui/material/Typography'
+import type { Translate } from 'next-translate'
 import TechnologiesList from './TechnologiesList'
 
 interface TechnologiesProps {

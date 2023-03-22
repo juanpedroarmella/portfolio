@@ -1,13 +1,10 @@
-import { Theme } from '@mui/material/styles'
 import Button from '@mui/material/Button'
-import styled from '@emotion/styled'
-
+import { styled } from '@mui/material/styles'
 interface DesktopNavButtonProps {
-  theme?: Theme
   selected: boolean
 }
 
-const DesktopNavButton = styled(Button)<DesktopNavButtonProps>(props => {
+const DesktopNavButton = styled(Button)<DesktopNavButtonProps>((props) => {
   const { theme, selected } = props
 
   return {
