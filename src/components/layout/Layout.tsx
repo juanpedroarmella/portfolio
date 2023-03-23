@@ -19,12 +19,12 @@ const Layout: React.FC<LayoutProps> = (props) => {
     <CenterContainer
       direction='column'
       component='article'
-      data-test-id='layout-container'
+      data-testid='layout-container'
     >
-      <Header data-test-id='header-container' />
+      <Header data-testid='header-container' />
       <LayoutContent
         component='section'
-        data-test-id='layout-content'
+        data-testid='layout-content'
         direction='column'
       >
         {children}

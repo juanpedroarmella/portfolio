@@ -6,8 +6,9 @@ import useSpacing from '@/hooks/useSpacing'
 import Typography from '@mui/material/Typography'
 import useTranslation from 'next-translate/useTranslation'
 import Meta from '@/components/atoms/Meta'
+import type { NextPage } from 'next/types'
 
-const Contact: React.FC = () => {
+const Contact: NextPage = () => {
   const { t } = useTranslation('contact')
   const isMobile = useIsMobile()
   const spacing = useSpacing()
@@ -15,7 +16,7 @@ const Contact: React.FC = () => {
     <CenterContainer
       direction='column'
       component='article'
-      data-test-id='contact-main-container'
+      data-testid='contact-main-container'
       width='100%'
       mt={isMobile ? 5 : 10}
       {...spacing}
@@ -27,7 +28,7 @@ const Contact: React.FC = () => {
         height='100vh'
         gap={1}
         alignItems='flex-start'
-        data-test-id='contact-subcontainer'
+        data-testid='contact-subcontainer'
       >
         <Typography variant='h1' mb={1}>
           {t('title')}

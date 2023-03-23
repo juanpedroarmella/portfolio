@@ -21,7 +21,7 @@ const Settings: React.FC = () => {
       startIcon={<SettingsIcon color='secondary' />}
       selected={selected}
       onClick={toggleSelected}
-      data-test-id='mobile-button-nav-settings'
+      data-testid='mobile-button-nav-settings'
     >
       {t('settings')}
     </MobileNavButton>
@@ -30,7 +30,7 @@ const Settings: React.FC = () => {
   const desktopIconButton = (
     <IconButton aria-label='Open settings'>
       <SettingsIcon
-        data-test-id='desktop-button-nav-settings'
+        data-testid='desktop-button-nav-settings'
         color='secondary'
       />
     </IconButton>

@@ -16,7 +16,7 @@ const Technologies: React.FC<TechnologiesProps> = (props) => {
       gap={5}
       {...spacing}
       component='article'
-      data-test-id='technologies-main-container'
+      data-testid='technologies-main-container'
     >
       <Typography variant='h1'>{t('technologies')}</Typography>
       <TechnologiesList />

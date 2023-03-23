@@ -14,7 +14,7 @@ const Proyect: React.FC<Props> = (props) => {
   return (
     <FlexBox
       component='li'
-      data-test-id='proyect-container'
+      data-testid='proyect-container'
       flexDirection='column'
       mb={2}
       gap={2}

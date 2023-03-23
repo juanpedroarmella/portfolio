@@ -30,7 +30,7 @@ const DialogMenu: React.FC<DialogMenuProps> = (props) => {
         onClick: handleClick
       })}
       <Menu
-        data-test-id='material-menu'
+        data-testid='material-menu'
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
@@ -38,7 +38,7 @@ const DialogMenu: React.FC<DialogMenuProps> = (props) => {
         anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
         transformOrigin={{ vertical: 'bottom', horizontal: 'center' }}
       >
-        <MenuItem data-test-id='menu-item-dialog'>{children}</MenuItem>
+        <MenuItem data-testid='menu-item-dialog'>{children}</MenuItem>
       </Menu>
     </div>
   )

@@ -21,7 +21,7 @@ const Nav: React.FC<NavProps> = (props) => {
     <Container
       flexDirection={props.direction ?? 'row'}
       component='nav'
-      data-test-id='navigation-buttons-container'
+      data-testid='navigation-buttons-container'
     >
       <NavigationButton
         href='/cv'

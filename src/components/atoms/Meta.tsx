@@ -7,21 +7,12 @@ interface Props {
   t: Translate
 }
 
-const Meta: React.FC<Props> = (props) => {
-  const { t } = props
-
+const Meta: React.FC<Props> = ({ t }) => {
   const { t: tCommon } = useTranslation('common')
 
   const title = useMemo(() => `${t('title')} - Juan Pedro Armella`, [t])
 
-  const image = useMemo(
-    () => 'https://juanpedroarmella.vercel.app/profile.jpg',
-    []
-  )
-
   const description = useMemo(() => tCommon('description'), [tCommon])
-
-  const twitterUsername = useMemo(() => '@juanpeearmella', [])
 
   return (
     <Head>
@@ -31,25 +22,25 @@ const Meta: React.FC<Props> = (props) => {
         name='keywords'
         content='resume, currículum, developer, software developer, programador, full-stack developer, technology, juan pedro armella'
       />
-      <meta name='robots' content='index,follow' />
       <meta name='author' content='Juan Pedro Armella' />
       <meta property='og:title' content={title} />
       <meta property='og:description' content={description} />
-      <meta property='og:image' content={image} />
       <meta property='og:type' content='website' />
-      <meta property='og:url' content='https://juanpedroarmella.vercel.app/' />
+      <meta
+        property='og:url'
+        content='https://juanpedroarmella.vercel.app/profile.jpg'
+      />
       <meta property='og:locale' content='es_AR' />
       <meta name='twitter:card' content='summary' />
       <meta name='twitter:title' content={title} />
       <meta name='twitter:description' content={description} />
-      <meta name='twitter:image' content={image} />
-      <meta name='twitter:site' content={twitterUsername} />
-      <meta name='twitter:creator' content={twitterUsername} />
-      <meta property='linkedin:title' content={title} />
-      <meta property='linkedin:description' content={description} />
-      <meta property='linkedin:image' content={image} />
-      <meta property='linkedin:image:width' content='200' />
-      <meta property='linkedin:image:height' content='200' />
+      <meta name='twitter:site' content='@juanpeearmella' />
+      <meta name='twitter:creator' content='@juanpeearmella' />
+      <link
+        rel='preload'
+        as='image'
+        href='https://juanpedroarmella.vercel.app/profile.jpg'
+      />
     </Head>
   )
 }

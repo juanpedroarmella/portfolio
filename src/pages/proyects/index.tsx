@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography'
 import useTranslation from 'next-translate/useTranslation'
 import { useMemo } from 'react'
 import Meta from '@/components/atoms/Meta'
+import type { NextPage } from 'next/types'
 
 interface ProyectType {
   title: string
@@ -17,7 +18,7 @@ interface ProyectType {
   linkText: string
 }
 
-const Proyects: React.FC = () => {
+const Proyects: NextPage = () => {
   const { t } = useTranslation('proyects')
   const arrProyects = useMemo(
     () => t('proyects', {}, { returnObjects: true }) as [],
@@ -29,18 +30,18 @@ const Proyects: React.FC = () => {
     <CenterContainer
       mt={isMobile ? 5 : 10}
       component='article'
-      data-test-id='proyects-page-main-container'
+      data-testid='proyects-page-main-container'
     >
       <Meta t={t} />
       <FlexBox
-        data-test-id='proyects-subcontainer'
+        data-testid='proyects-subcontainer'
         flexDirection='column'
         gap={1}
         height='100vh'
         {...spacing}
       >
         <Typography variant='h1'>{t('title')}</Typography>
-        <List data-test-id='proyects-list-container'>
+        <List data-testid='proyects-list-container'>
           {arrProyects.map((proyect: ProyectType) => {
             const { title, description, date, href } = proyect
             const key = `${title}_${description}_${date}_${href}`

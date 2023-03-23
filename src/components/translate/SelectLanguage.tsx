@@ -23,22 +23,18 @@ const SelectLanguage = (): JSX.Element => {
   }, [])
 
   return (
-    <FormControl data-test-id='form-control-select-language'>
-      <InputLabel data-test-id='label-select-language'>
+    <FormControl data-testid='form-control-select-language'>
+      <InputLabel data-testid='label-select-language'>
         {t('language')}
       </InputLabel>
       <Select
         label={t('language')}
-        data-test-id='select-language'
+        data-testid='select-language'
         value={lang}
         onChange={(e) => handleChange(e)}
       >
         {i18nConfig.locales.map((lng: string) => (
-          <StyledMenuItem
-            data-test-id={`language-${lng}`}
-            value={lng}
-            key={lng}
-          >
+          <StyledMenuItem data-testid={`language-${lng}`} value={lng} key={lng}>
             {t(`language-name-${lng}`)}
           </StyledMenuItem>
         ))}

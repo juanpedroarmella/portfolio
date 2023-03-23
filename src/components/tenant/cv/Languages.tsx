@@ -48,13 +48,13 @@ const Languages: React.FC<LanguagesProps> = (props): JSX.Element => {
   const spacing = useSpacing()
   return (
     <LanguagesContainer
-      data-test-id='languages-main-container'
+      data-testid='languages-main-container'
       component='article'
       direction='column'
       {...spacing}
     >
       <WithUnderline variant='h1'>{t('languages.title')}</WithUnderline>
-      <List data-test-id='languages-list-container'>
+      <List data-testid='languages-list-container'>
         <ListItem disablePadding>
           <FlexBox gap={1}>
             <SmallCheckIcon />

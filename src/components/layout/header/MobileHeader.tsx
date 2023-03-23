@@ -30,10 +30,10 @@ const MobileHeader = (): JSX.Element => {
     <MobileHeaderWrapper
       component='header'
       mx='2%'
-      data-test-id='mobile-header-main-container'
+      data-testid='mobile-header-main-container'
     >
       <Drawer
-        data-test-id='mobile-drawer'
+        data-testid='mobile-drawer'
         anchor='left'
         ActivateDrawerButton={
           <IconButton aria-label='open-mobile-drawer-navigation'>
@@ -43,7 +43,7 @@ const MobileHeader = (): JSX.Element => {
       >
         <ElementsWrapper
           component='section'
-          data-test-id='nav-buttons-container'
+          data-testid='nav-buttons-container'
         >
           <Nav direction='column' />
           <Settings />

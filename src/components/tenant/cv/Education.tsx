@@ -36,13 +36,13 @@ const Education: React.FC<EducationProps> = (props) => {
       width='100%'
       direction='column'
       {...spacing}
-      data-test-id='education-container'
+      data-testid='education-container'
       component='article'
     >
       <WithUnderline variant='h1'>{t('education.title')}</WithUnderline>
       <Typography variant='h2'>{t('education.career')}</Typography>
       <Typography variant='h3'>{t('education.university')}</Typography>
-      <GridBox gap={1} data-test-id='knowledge-container' component='section'>
+      <GridBox gap={1} data-testid='knowledge-container' component='section'>
         <Typography variant='body1'>
           {t('education.knowledge.title')}
         </Typography>

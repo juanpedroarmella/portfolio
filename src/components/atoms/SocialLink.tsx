@@ -15,9 +15,15 @@ const SocialLink: React.FC<SocialLinkProps> = (props) => {
     <CenterContainer
       gap={2}
       flexWrap='wrap'
-      data-test-id='social-link-container'
+      data-testid='social-link-container'
     >
-      <Image src={props.iconSrc} alt={props.iconAlt} width={40} height={40} />
+      <Image
+        src={props.iconSrc}
+        alt={props.iconAlt}
+        width={40}
+        height={40}
+        priority
+      />
       <CustomLink href={props.href} target='_blank'>
         <Typography
           variant='overline'

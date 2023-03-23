@@ -24,7 +24,7 @@ const Experience: React.FC<ExperienceProps> = (props) => {
       gap={2}
       width='100%'
       {...spacing}
-      data-test-id='experience-container'
+      data-testid='experience-container'
       component='article'
     >
       <Typography variant='h1'>{t('experience.title')}</Typography>
@@ -32,7 +32,7 @@ const Experience: React.FC<ExperienceProps> = (props) => {
       <Typography variant='h3'>{t('experience.position')}</Typography>
       <GridBox
         gap={1}
-        data-test-id='experience-tasks-container'
+        data-testid='experience-tasks-container'
         component='section'
       >
         <Typography variant='body1'>{t('experience.description')}</Typography>
@@ -40,7 +40,7 @@ const Experience: React.FC<ExperienceProps> = (props) => {
         <List disablePadding>
           {arrTasks.map((task: string, index: number) => (
             <ListItem disablePadding key={index}>
-              <CenterContainer gap={1} data-test-id={`container-task-${index}`}>
+              <CenterContainer gap={1} data-testid={`container-task-${index}`}>
                 <CheckIcon fontSize='small' color='secondary' />
                 <ListItemText primary={task} />
               </CenterContainer>

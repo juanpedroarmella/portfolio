@@ -15,16 +15,17 @@ const Container = styled(CenterContainer)({
   marginTop: 0
 })
 
-const MainTitle: React.FC = () => {
+const MainTitle = (): JSX.Element => {
   const spacing = useSpacing()
+
   return (
-    <Container direction='column' gap={4} data-test-id='main-title-container'>
+    <Container direction='column' gap={4} data-testid='main-title-container'>
       <CenterContainer
         {...spacing}
         direction='column'
         gap={4}
         width='80%'
-        data-test-id='profile-container'
+        data-testid='profile-container'
         component='article'
       >
         <Image
@@ -33,6 +34,7 @@ const MainTitle: React.FC = () => {
           width={200}
           height={200}
           style={{ borderRadius: 200 }}
+          priority
         />
         <Box>
           <Typography variant='h2'>Juan Pedro Armella</Typography>
@@ -43,4 +45,5 @@ const MainTitle: React.FC = () => {
     </Container>
   )
 }
+
 export default MainTitle

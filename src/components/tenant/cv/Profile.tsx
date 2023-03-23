@@ -24,7 +24,7 @@ const Profile: React.FC<ProfileProps> = (props) => {
     <ProfileContainer
       direction='column'
       {...spacing}
-      data-test-id='about-me-container'
+      data-testid='about-me-container'
       component='article'
     >
       <WithUnderline variant='h1'>{t('profile.title')}</WithUnderline>
