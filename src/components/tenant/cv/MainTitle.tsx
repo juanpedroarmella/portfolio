@@ -36,7 +36,7 @@ const MainTitle: React.FC = () => {
         />
         <Box>
           <Typography variant='h2'>Juan Pedro Armella</Typography>
-          <Typography variant='h3'>Software Developer</Typography>
+          <Typography variant='h1'>Software Developer</Typography>
         </Box>
       </CenterContainer>
       <ScrollDownIndicator />

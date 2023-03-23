@@ -3,36 +3,24 @@ import palette from './palette'
 const typography = {
   fontFamily: 'Roboto, sans-serif',
   h1: {
-    fontSize: '3.5rem',
-    fontWeight: 500,
-    lineHeight: 1.2,
-    color: palette.text.primary
-  },
-  h2: {
-    fontSize: '2.5rem',
-    fontWeight: 500,
-    lineHeight: 1.2,
-    color: palette.text.primary
-  },
-  h3: {
     fontSize: '1.85rem',
     fontWeight: 500,
     lineHeight: 1.3,
     color: palette.text.primary
   },
-  h4: {
+  h2: {
     fontSize: '1.5rem',
     fontWeight: 500,
     lineHeight: 1.4,
     color: palette.text.primary
   },
-  h5: {
+  h3: {
     fontSize: '1.25rem',
     fontWeight: 500,
     lineHeight: 1.5,
     color: palette.text.primary
   },
-  h6: {
+  h4: {
     fontSize: '1rem',
     fontWeight: 500,
     lineHeight: 1.6,

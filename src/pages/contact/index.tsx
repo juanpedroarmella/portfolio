@@ -29,7 +29,7 @@ const Contact: React.FC = () => {
         alignItems='flex-start'
         data-test-id='contact-subcontainer'
       >
-        <Typography variant='h3' mb={1}>
+        <Typography variant='h1' mb={1}>
           {t('title')}
         </Typography>
         <SocialLink

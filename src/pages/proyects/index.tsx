@@ -39,7 +39,7 @@ const Proyects: React.FC = () => {
         height='100vh'
         {...spacing}
       >
-        <Typography variant='h3'>{t('title')}</Typography>
+        <Typography variant='h1'>{t('title')}</Typography>
         <List data-test-id='proyects-list-container'>
           {arrProyects.map((proyect: ProyectType) => {
             const { title, description, date, href } = proyect

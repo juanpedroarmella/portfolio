@@ -37,7 +37,7 @@ const TechnologiesList: React.FC = () => {
       {techImages.map((tech: { path: string, name: string }, index: number) => (
         <GridBox component='li' gap={1} justifyItems='center' key={index}>
           <Image src={'/' + tech.path} alt={tech.name} width={64} height={64} />
-          <Typography variant='h5'>{tech.name}</Typography>
+          <Typography variant='h1'>{tech.name}</Typography>
         </GridBox>
       ))}
     </CenterContainer>

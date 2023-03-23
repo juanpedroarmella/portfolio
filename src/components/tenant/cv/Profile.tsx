@@ -27,7 +27,7 @@ const Profile: React.FC<ProfileProps> = (props) => {
       data-test-id='about-me-container'
       component='article'
     >
-      <WithUnderline variant='h3'>About me</WithUnderline>
+      <WithUnderline variant='h1'>{t('profile.title')}</WithUnderline>
       <Typography variant='body1'>{t('profile.text')}</Typography>
     </ProfileContainer>
   )

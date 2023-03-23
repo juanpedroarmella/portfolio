@@ -19,7 +19,7 @@ const Proyect: React.FC<Props> = (props) => {
       mb={2}
       gap={2}
     >
-      <Typography variant='h4'>{props.title}</Typography>
+      <Typography variant='h2'>{props.title}</Typography>
       <Typography variant='body1'>{props.description}</Typography>
       <Button
         variant='contained'

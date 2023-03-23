@@ -53,7 +53,7 @@ const Languages: React.FC<LanguagesProps> = (props): JSX.Element => {
       direction='column'
       {...spacing}
     >
-      <WithUnderline variant='h3'>{t('languages.title')}</WithUnderline>
+      <WithUnderline variant='h1'>{t('languages.title')}</WithUnderline>
       <List data-test-id='languages-list-container'>
         <ListItem disablePadding>
           <FlexBox gap={1}>

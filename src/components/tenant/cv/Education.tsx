@@ -39,9 +39,9 @@ const Education: React.FC<EducationProps> = (props) => {
       data-test-id='education-container'
       component='article'
     >
-      <WithUnderline variant='h3'>{t('education.title')}</WithUnderline>
-      <Typography variant='h5'>{t('education.career')}</Typography>
-      <Typography variant='h6'>{t('education.university')}</Typography>
+      <WithUnderline variant='h1'>{t('education.title')}</WithUnderline>
+      <Typography variant='h3'>{t('education.career')}</Typography>
+      <Typography variant='h4'>{t('education.university')}</Typography>
       <GridBox gap={1} data-test-id='knowledge-container' component='section'>
         <Typography variant='body1'>
           {t('education.knowledge.title')}

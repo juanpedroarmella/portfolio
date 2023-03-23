@@ -18,7 +18,7 @@ const Technologies: React.FC<TechnologiesProps> = (props) => {
       component='article'
       data-test-id='technologies-main-container'
     >
-      <Typography variant='h3'>{t('technologies')}</Typography>
+      <Typography variant='h1'>{t('technologies')}</Typography>
       <TechnologiesList />
     </GridBox>
   )
