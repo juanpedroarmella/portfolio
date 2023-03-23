@@ -28,8 +28,8 @@ const Experience: React.FC<ExperienceProps> = (props) => {
       component='article'
     >
       <Typography variant='h1'>{t('experience.title')}</Typography>
-      <Typography variant='h3'>{t('experience.company')}</Typography>
-      <Typography variant='h4'>{t('experience.position')}</Typography>
+      <Typography variant='h2'>{t('experience.company')}</Typography>
+      <Typography variant='h3'>{t('experience.position')}</Typography>
       <GridBox
         gap={1}
         data-test-id='experience-tasks-container'
