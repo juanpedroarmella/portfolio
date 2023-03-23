@@ -15,7 +15,7 @@ const Meta: React.FC<Props> = (props) => {
   const title = useMemo(() => `${t('title')} - Juan Pedro Armella`, [t]);
 
   const image = useMemo(
-    () => 'https://juanpedroarmella.vercel.app/profile',
+    () => 'https://juanpedroarmella.vercel.app/profile.jpg',
     [],
   );
 
