@@ -18,7 +18,7 @@ const ScrollDownIndicator: React.FC = () => {
 
   return (
     <StyledContainer visible={visible} data-testid='scroll-down-container'>
-      <Slide direction='down' in={visible} mountOnEnter unmountOnExit>
+      <Slide direction='down' in={visible} timeout={500} unmountOnExit>
         <StyledIconButton
           onClick={handleClick}
           aria-label='Click here to scroll down'

@@ -6,10 +6,13 @@ import Drawer from '@/components/atoms/Drawer'
 import IconButton from '@mui/material/IconButton'
 import Settings from '@/components/settings/Settings'
 import { styled } from '@mui/material/styles'
+import slideIn from '@/styles/animations/slideIn'
+
 const MobileHeaderWrapper = styled(HeaderWrapper)(() => {
   return {
     marginTop: '.5rem',
-    width: '96%'
+    width: '96%',
+    animation: `${slideIn} 0.5s ease-in-out`
   }
 })
 

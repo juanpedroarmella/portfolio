@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography'
 import { styled } from '@mui/material/styles'
 import Box from '@mui/system/Box'
 import Image from 'next/image'
+import appear from '@/styles/animations/appear'
 
 const Container = styled(CenterContainer)({
   background: `linear-gradient(to bottom right, ${theme.palette.secondary.main}, ${theme.palette.primary.main})`,
@@ -27,6 +28,7 @@ const MainTitle = (): JSX.Element => {
         width='80%'
         data-testid='profile-container'
         component='article'
+        sx={{ animation: `${appear} 1s ease-in` }}
       >
         <Image
           src='/profile.jpg'

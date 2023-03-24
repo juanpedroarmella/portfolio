@@ -10,6 +10,7 @@ import type { NextPage } from 'next/types'
 import EmailIcon from '@mui/icons-material/Email'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import appear from '@/styles/animations/appear'
 
 const Contact: NextPage = () => {
   const { t } = useTranslation('contact')
@@ -32,6 +33,7 @@ const Contact: NextPage = () => {
         gap={1}
         alignItems='flex-start'
         data-testid='contact-subcontainer'
+        sx={{ animation: `${appear} 1s ease-in` }}
       >
         <Typography variant='h1' mb={1}>
           {t('title')}
