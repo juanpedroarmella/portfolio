@@ -1,11 +1,9 @@
 import Typography from '@mui/material/Typography'
-import Image from 'next/image'
 import CenterContainer from './CenterContainer'
 import CustomLink from './CustomLink'
 
 interface SocialLinkProps {
-  iconSrc: string
-  iconAlt: string
+  icon: React.ReactNode
   href: string
   text: string
 }
@@ -17,13 +15,7 @@ const SocialLink: React.FC<SocialLinkProps> = (props) => {
       flexWrap='wrap'
       data-testid='social-link-container'
     >
-      <Image
-        src={props.iconSrc}
-        alt={props.iconAlt}
-        width={40}
-        height={40}
-        priority
-      />
+      {props.icon}
       <CustomLink href={props.href} target='_blank'>
         <Typography
           variant='overline'

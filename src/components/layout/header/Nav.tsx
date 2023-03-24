@@ -1,7 +1,6 @@
 import useTranslation from 'next-translate/useTranslation'
 import NavigationButton from '@/components/layout/header/NavigationButton'
 import PersonIcon from '@mui/icons-material/Person'
-import AppsIcon from '@mui/icons-material/Apps'
 import CallIcon from '@mui/icons-material/Call'
 import Box from '@mui/material/Box'
 import { styled } from '@mui/material/styles'
@@ -21,17 +20,18 @@ const Nav: React.FC<NavProps> = (props) => {
     <Container
       flexDirection={props.direction ?? 'row'}
       component='nav'
-      data-testid='navigation-buttons-container'>
+      data-testid='navigation-buttons-container'
+    >
       <NavigationButton
         href='/cv'
         text={t('nav-cv')}
         startIcon={<PersonIcon />}
       />
-      {/*<NavigationButton
+      {/* <NavigationButton
         href='/proyects'
         text={t('nav-proyects')}
         startIcon={<AppsIcon />}
-      />*/}
+      /> */}
       <NavigationButton
         href='/contact'
         text={t('nav-contact')}

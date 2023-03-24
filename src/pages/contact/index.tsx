@@ -7,6 +7,9 @@ import Typography from '@mui/material/Typography'
 import useTranslation from 'next-translate/useTranslation'
 import Meta from '@/components/atoms/Meta'
 import type { NextPage } from 'next/types'
+import EmailIcon from '@mui/icons-material/Email'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
 const Contact: NextPage = () => {
   const { t } = useTranslation('contact')
@@ -36,21 +39,18 @@ const Contact: NextPage = () => {
         <SocialLink
           text='github.com/juanpedroarmella'
           href='http://github.com/juanpedroarmella'
-          iconSrc='/github.svg'
-          iconAlt='Github'
+          icon={<GitHubIcon fontSize='large' />}
         />
 
         <SocialLink
           text='linkedin.com/in/juanpedroarmella'
           href='http://linkedin.com/in/juanpedroarmella'
-          iconSrc='/linkedin.svg'
-          iconAlt='Github'
+          icon={<LinkedInIcon fontSize='large' color='info' />}
         />
         <SocialLink
           text='juanpedroarmella@gmail.com'
           href='mailto:juanpedroarmella@gmail.com?subject=Asunto del correo'
-          iconSrc='/gmail.svg'
-          iconAlt='Gmail'
+          icon={<EmailIcon fontSize='large' sx={{ fill: 'white' }} />}
         />
       </FlexBox>
     </CenterContainer>
