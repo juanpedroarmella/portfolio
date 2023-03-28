@@ -1,4 +1,5 @@
 import useScrollDownIndicator from '@/hooks/useScrollDownIndicator'
+import appear from '@/styles/animations/appear'
 import ArrowDownward from '@mui/icons-material/ArrowDownward'
 import IconButton from '@mui/material/IconButton'
 import Slide from '@mui/material/Slide'
@@ -18,14 +19,12 @@ const ScrollDownIndicator: React.FC = () => {
 
   return (
     <StyledContainer visible={visible} data-testid='scroll-down-container'>
-      <Slide direction='down' in={visible} timeout={1000} unmountOnExit>
-        <StyledIconButton
-          onClick={handleClick}
-          aria-label='Click here to scroll down'
-          data-testid='scroll-down-indicator-button'>
-          <ArrowDownward fontSize='large' color='secondary' />
-        </StyledIconButton>
-      </Slide>
+      <StyledIconButton
+        onClick={handleClick}
+        aria-label='Click here to scroll down'
+        data-testid='scroll-down-indicator-button'>
+        <ArrowDownward fontSize='large' color='secondary' />
+      </StyledIconButton>
     </StyledContainer>
   )
 }
@@ -42,6 +41,7 @@ const StyledContainer = styled('div')<ContainerProps>`
   z-index: 999;
   opacity: ${(props) => (props.visible ? 1 : 0)};
   transition: opacity 0.3s ease-in-out;
+  animation: ${appear} 1s ease-in;
 `
 
 const blink = keyframes`
