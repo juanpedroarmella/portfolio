@@ -50,5 +50,8 @@
     "title": "Lenguajes",
     "spanish": "Español",
     "native": "Nativo"
-  }
+  },
+  "error-downloading": "Ha ocurrido un error al descargar el archivo.",
+  "downloading": "Descargando...",
+  "download": "Descargar CV"
 }

@@ -17,7 +17,6 @@ const HeaderWrapper = styled(Box)(({ theme }) => {
     marginTop: '1rem',
     transition: 'box-shadow .2s ease',
     zIndex: 1,
-    backdropFilter: 'blur(20px)',
     boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.08)'
   }
 })

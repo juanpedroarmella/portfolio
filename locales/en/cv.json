@@ -50,5 +50,8 @@
     "title": "Languages",
     "spanish": "Spanish",
     "native": "Native"
-  }
+  },
+  "error-downloading": "An error has ocurred downloading the file.",
+  "downloading": "Downloading...",
+  "download": "Download Resume"
 }

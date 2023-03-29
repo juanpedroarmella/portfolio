@@ -2,7 +2,6 @@ import useScrollDownIndicator from '@/hooks/useScrollDownIndicator'
 import appear from '@/styles/animations/appear'
 import ArrowDownward from '@mui/icons-material/ArrowDownward'
 import IconButton from '@mui/material/IconButton'
-import Slide from '@mui/material/Slide'
 import { keyframes, styled } from '@mui/material/styles'
 
 import { useCallback } from 'react'
@@ -22,7 +21,8 @@ const ScrollDownIndicator: React.FC = () => {
       <StyledIconButton
         onClick={handleClick}
         aria-label='Click here to scroll down'
-        data-testid='scroll-down-indicator-button'>
+        data-testid='scroll-down-indicator-button'
+      >
         <ArrowDownward fontSize='large' color='secondary' />
       </StyledIconButton>
     </StyledContainer>

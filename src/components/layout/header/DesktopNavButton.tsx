@@ -29,10 +29,10 @@ const DesktopNavButton = styled(Button)<DesktopNavButtonProps>((props) => {
     },
     '&:hover': {
       backgroundColor: 'transparent',
-      color: theme.palette.secondary.main,
+      color: theme.palette.secondary.light,
       '&::after': {
         width: '35%',
-        backgroundColor: theme.palette.secondary.main
+        backgroundColor: theme.palette.secondary.light
       }
     }
   }

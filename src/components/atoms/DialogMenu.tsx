@@ -3,11 +3,18 @@ import MenuItem from '@mui/material/MenuItem'
 import Menu from '@mui/material/Menu'
 import type { IconButtonProps } from '@mui/material/IconButton'
 import { cloneElement, useState } from 'react'
+import { styled } from '@mui/material/styles'
 
 interface DialogMenuProps {
   children: React.ReactNode
   ActivateDialogButton: React.ReactElement<ButtonProps | IconButtonProps>
 }
+
+const StyledMenu = styled(Menu)({
+  '& .MuiList-root.MuiList-padding.MuiMenu-list': {
+    padding: 0
+  }
+})
 
 const DialogMenu: React.FC<DialogMenuProps> = (props) => {
   const { children, ActivateDialogButton } = props
@@ -29,7 +36,7 @@ const DialogMenu: React.FC<DialogMenuProps> = (props) => {
       {cloneElement(ActivateDialogButton, {
         onClick: handleClick
       })}
-      <Menu
+      <StyledMenu
         data-testid='material-menu'
         anchorEl={anchorEl}
         open={open}
@@ -38,8 +45,10 @@ const DialogMenu: React.FC<DialogMenuProps> = (props) => {
         anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
         transformOrigin={{ vertical: 'bottom', horizontal: 'center' }}
       >
-        <MenuItem data-testid='menu-item-dialog'>{children}</MenuItem>
-      </Menu>
+        <MenuItem data-testid='menu-item-dialog' sx={{ p: 1.4 }}>
+          {children}
+        </MenuItem>
+      </StyledMenu>
     </div>
   )
 }

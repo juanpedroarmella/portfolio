@@ -7,6 +7,7 @@ import { styled } from '@mui/material/styles'
 import Box from '@mui/system/Box'
 import Image from 'next/image'
 import appear from '@/styles/animations/appear'
+import DownloadCV from './DownloadCv'
 
 const Container = styled(CenterContainer)({
   background: `linear-gradient(to bottom right, ${theme.palette.secondary.main}, ${theme.palette.primary.main})`,
@@ -42,7 +43,9 @@ const MainTitle = (): JSX.Element => {
           <Typography variant='h2'>Juan Pedro Armella</Typography>
           <Typography variant='h1'>Software Developer</Typography>
         </Box>
+        <DownloadCV />
       </CenterContainer>
+
       <ScrollDownIndicator />
     </Container>
   )

@@ -12,7 +12,9 @@ const MobileNavButton = styled(Button)<MobileNavButtonProps>(
     paddingLeft: '1rem',
     fontWeight: '600',
     textTransform: 'capitalize',
-    color: selected ? theme.palette.text.primary : theme.palette.secondary.main,
+    color: selected
+      ? theme.palette.text.primary
+      : theme.palette.secondary.light,
     background: selected ? theme.palette.action.focus : 'inherit'
   })
 )

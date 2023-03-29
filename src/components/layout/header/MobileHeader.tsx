@@ -7,6 +7,7 @@ import IconButton from '@mui/material/IconButton'
 import Settings from '@/components/settings/Settings'
 import { styled } from '@mui/material/styles'
 import slideIn from '@/styles/animations/slideIn'
+import theme from '@/styles/theme'
 
 const MobileHeaderWrapper = styled(HeaderWrapper)(() => {
   return {
@@ -25,7 +26,8 @@ const ElementsWrapper = styled(FlexBox)({
   padding: '1rem',
   '& > *': {
     width: '100%'
-  }
+  },
+  background: theme.palette.background.paper
 })
 
 const MobileHeader = (): JSX.Element => {
@@ -40,7 +42,7 @@ const MobileHeader = (): JSX.Element => {
         anchor='left'
         ActivateDrawerButton={
           <IconButton aria-label='open-mobile-drawer-navigation'>
-            <MenuIcon color='secondary' />
+            <MenuIcon color='action' />
           </IconButton>
         }
       >
