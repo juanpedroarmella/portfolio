@@ -52,7 +52,8 @@ const DownloadCV: React.FC = () => {
         variant='contained'
         onClick={handleDownload}
         disabled={isDownloading}
-        startIcon={<Download />}>
+        startIcon={<Download />}
+      >
         {isDownloading ? t('downloading') : t('download')}
       </Button>
       <ToastContainer />
