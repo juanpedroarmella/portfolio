@@ -10,9 +10,17 @@ interface DialogMenuProps {
   ActivateDialogButton: React.ReactElement<ButtonProps | IconButtonProps>
 }
 
-const StyledMenu = styled(Menu)({
-  '& .MuiList-root.MuiList-padding.MuiMenu-list': {
-    padding: 0
+const StyledMenu = styled(Menu)(({ theme }) => {
+  return {
+    '& .MuiList-root.MuiList-padding.MuiMenu-list': {
+      padding: 0
+    },
+    '& .MuiFormLabel-root.MuiInputLabel-root.Mui-focused': {
+      color: theme.palette.text.primary
+    },
+    '& .Mui-focused .MuiOutlinedInput-notchedOutline': {
+      borderColor: theme.palette.action.selected
+    }
   }
 })
 

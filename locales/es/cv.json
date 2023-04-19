@@ -2,7 +2,7 @@
   "title": "Currículum",
   "profile": {
     "title": "Resumen",
-    "text": "Cuento con 1 año de experiencia en el desarrollo web frontend (React, Vue, Nextjs). Poseo conocimiento tanto en el área del frontend como también en el backend. Actualmente me encuentro en la busqueda de una nueva oportunidad laboral en área del desarrollo del software."
+    "text": "Poseo 1 año de experiencia en desarrollo web frontend y más de 4 años de formación en el desarrollo de software, trabajando en proyectos de entornos académicos, profesionales y personales. Mi conocimiento abarca tanto el área de frontend como backend, lo que me hace estar bien equipado para ofrecer soluciones integrales. Actualmente busco nuevas oportunidades de trabajo en el área del desarrollo de software. "
   },
   "experience": {
     "title": "Experiencia",
@@ -10,16 +10,17 @@
     "position": "Front-end Developer",
     "description": "Posición como desarrollador frontend a cargo de implementar aplicaciones web3 en diferentes tecnologías (React, NextJs, Vue).",
     "tasks": {
-      "title": "Las tareas principales incluyen:",
+      "title": "Principales tareas:",
       "list": [
-        "Desarrollo de nuevas funcionalidades en aplicaciones web3 (orientado a la blockchain y el uso de criptoactivos).",
-        "Mostrar y modificar datos de criptomonedas a través de servicios REST.",
-        "Diseño e implementación de componentes de interfaz de usuario que interactúen con la blockchain y smart contracts.",
-        "Documentación de componentes.",
-        "Ayudar al análisis de requerimientos y aportar posibles soluciones a la hora de desarrollar nuevas funcionalidades.",
-        "Ayudar a los nuevos miembros del equipo en el onboarding, con respecto a la base de código y al despliegue local.",
+        "Implementación de componentes de interfaz de usuario que interactúen con diferentes redes blockchain como Ethereum Mainnet, Binance Smart Chain y Polygon Network.",
+        "Manipulación de datos de criptomonedas y/o NFTs a través de servicios REST y wallets como Metamask. ",
+        "Creación de paquetes y módulos de componentes reutilizables en varios proyectos",
+        "Documentación de componentes utilizando Storybook.",
+        "Contribución al análisis de requerimientos y desarrollo de soluciones para nuevas funcionalidades.",
+        "Orientación de nuevos miembros del equipo en el onboarding y en la comprensión de la base de código y el despliegue local.",
         "Despliegue e integración continua de aplicaciones web utilizando servicios como Vercel o AWS.",
-        "Desarrollo con renderizado del lado del servidor y optimización SEO."
+        "Desarrollo con renderizado del lado del servidor y optimización para SEO.",
+        "Creación de landing pages utilizando servicios como Hubspot o Wordpress."
       ]
     }
   },
@@ -28,20 +29,22 @@
     "career": "Tecnicatura Universitaria en Desarrollo de Aplicaciones Informaticas | 2020 - 2023",
     "university": "Universidad Nacional del Centro de la Provincia de Buenos Aires | Tandil, Argentina",
     "knowledge": {
-      "title": "Principales conocimientos adquiridos:",
+      "title": "Conocimientos relevantes:",
       "list": [
-        "Programación: Conceptos básicos, programación estructurada y orientada a objetos y nociones de complejidad.",
-        "Comprensión y uso de metodologías de desarrollo.",
-        "Procesos de verificación y documentación.",
+        "Programación: Conceptos básicos, programación estructurada y orientada a objetos, y nociones de complejidad.",
+        "Estructuras de datos.",
+        "Comprensión y uso de metodologías de desarrollo ágiles.",
+        "Bases de datos relacionales y no relacionales.",
+        "Arquitecturas web, microservicios y cloud computing.",
+        "Procesos de verificación (testing) y documentación.",
+        "Patrones de diseño.",
+        "Configuración y desarrollo de aplicaciones en redes.",
+        "Procesos de integración continua y manejo de contenedores.",
         "Interfaces de usuario: manejo de eventos, conceptos de diseño de interfaces, principios de visualización en computadora, usabilidad y accesibilidad en distintos dispositivos.",
-        "Participación en proyectos de desarrollo de sistemas de información.",
         "Matemática y lógica proposicional aplicada a la computación.",
-        "Formación integral, entendiendo los conceptos teóricos dentro del análisis de casos reales.",
-        "Capacidad para discutir ideas y alternativas para la solución de problemas.",
         "Capacidad de actualizarse en las nuevas tecnologías, metodologías y herramientas concernientes al desarrollo de sistemas.",
-        "Implementar sistemas o sub-sistemas informáticos a partir de una descripción del problema y su diseño detallado, siguiendo una metodología dada.",
-        "Interpretar adecuadamente estructuras de datos y poder definir procesos de alta, bajas, modificaciones y consultas a estos datos.",
-        "Aplicar prácticas metodológicas para administrar la calidad de un sistema informático."
+        "Implementación de sistemas o sub-sistemas informáticos a partir de una descripción del problema y su diseño detallado, siguiendo una metodología dada.",
+        "Aplicación de prácticas metodológicas para administrar la calidad de un sistema informático."
       ]
     }
   },

@@ -48,6 +48,7 @@ const palette = {
   },
   action: {
     main: '#8eacbb',
+    selected: '#8eacbb',
     active: '#ffffff'
   }
 }

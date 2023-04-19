@@ -2,24 +2,24 @@
   "title": "Resume",
   "profile": {
     "title": "About me",
-    "text": "I have 1 year of experience in frontend web development (React, Vue, Nextjs). I have knowledge in both frontend and backend areas. I am currently looking for a new job opportunity in the area of ​​software development."
+    "text": "I have 1 year of professional experience in frontend web development and over 4 years of training in software development, working on projects in academic, professional, and personal environments. My knowledge spans both frontend and backend areas, making me well-equipped to deliver comprehensive solutions."
   },
   "experience": {
     "title": "Experience",
     "company": "Startup Euler Tools Solutions (Spain) | 1 Year",
     "position": "Front-end Developer",
-    "description": "Position as frontend developer in charge of implementing web3 applications in different technologies (React, NextJs, Vue).",
+    "description": "In charge of developing web2 and web3 applications using a variety of technologies, including React, NextJs, and Vue.",
     "tasks": {
-      "title": "The main tasks include:",
+      "title": "Main tasks:",
       "list": [
-        "Development of new functionalities in web3 applications (oriented to the blockchain and the use of cryptoactives).",
-        "Display and modify cryptocurrency data through REST services.",
-        "Design and implementation of user interface components that interact with the blockchain and smart contracts.",
-        "Component documentation.",
-        "Help with the requirements analysis and provide possible solutions when developing new functionalities.",
-        "Assist new team members with onboarding, code base and local deployment.",
-        "Deployment and continuous integration of web applications using services such as Vercel or AWS.",
-        "Development with server-side rendering and SEO optimization."
+        "Implementation of user interface components that interact with different blockchain networks such as Ethereum Mainnet, Binance Smart Chain, and Polygon Network. ",
+        "Manipulation of cryptocurrency and/or NFT data through REST services and wallets like Metamask.",
+        "Creation of reusable component packages and modules across multiple projects",
+        "Documentation of UI components using Storybook.",
+        "Contribution to requirement analysis and development of solutions for new functionalities. ",
+        "Orientation of new team members in onboarding and understanding of the codebase and local deployment.",
+        "Server-side rendering development and optimization for SEO.",
+        "Creation of landing pages using services like Hubspot or Wordpress."
       ]
     }
   },
@@ -28,30 +28,31 @@
     "career": "University Technician in Computer Applications Development | 2020-2023",
     "university": "Universidad Nacional del Centro de la Provincia de Buenos Aires | Tandil, Argentina",
     "knowledge": {
-      "title": "Main knowledge acquired:",
+      "title": "Relevant knowledge:",
       "list": [
         "Programming: Basic concepts, structured and object-oriented programming and notions of complexity.",
-        "Understanding and use of development methodologies. ",
-        "Verification and documentation processes. ",
-        "User interfaces: event handling, interface design concepts, computer visualization principles, usability and accessibility on different devices.",
-        "Participation in information systems development projects. ",
-        "Mathematics and propositional logic applied to computing. ",
-        "Comprehensive training, understanding the theoretical concepts within the analysis of real cases.",
-        "Ability to discuss ideas and alternatives for solving problems.  ",
-        "Ability to update on new technologies, methodologies and tools concerning the development of systems. ",
-        "Implement computer systems or sub-systems based on a description of the problem and its detailed design, following a given methodology.",
-        "Adequately interpret the data structures and be able to define registrations, cancellations, modifications and queries to this data.",
-        "Apply methodological practices to manage the quality of a computer system. "
+        "Data structures.",
+        "Understanding and use of agile development methodologies.",
+        "Relational and non-relational databases.",
+        "Web architectures, microservices cloud computing.",
+        "Verification processes (testing) and documentation. ",
+        "Design patterns.",
+        "Configuration and development of applications in networks.",
+        "Continuous integration processes and container management.",
+        "Mathematics and propositional logic applied to computing.",
+        "Ability to keep up to date with new technologies, methodologies, and tools related to system development. ",
+        "Implementation of computer systems or subsystems from a problem description and detailed design, following a given methodology. ",
+        "Application of methodological practices to manage the quality of a computer system."
       ]
     }
   },
-  "technologies": "Tecnologies",
+  "technologies": "Technologies",
   "languages": {
     "title": "Languages",
     "spanish": "Spanish",
     "native": "Native"
   },
-  "error-downloading": "An error has ocurred downloading the file.",
+  "error-downloading": "An error occurred while downloading the file.",
   "downloading": "Downloading...",
   "download": "Download Resume"
 }

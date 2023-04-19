@@ -7,13 +7,6 @@ import Select from '@mui/material/Select'
 import type { SelectChangeEvent } from '@mui/material/Select'
 import MenuItem from '@mui/material/MenuItem'
 import { useCallback } from 'react'
-import { styled } from '@mui/material/styles'
-
-const StyledMenuItem = styled(MenuItem)({
-  '& li.MuiButtonBase-root.MuiMenuItem-root:hover': {
-    backgroundColor: 'white'
-  }
-})
 
 const SelectLanguage = (): JSX.Element => {
   const { t, lang } = useTranslation('common')
@@ -34,9 +27,9 @@ const SelectLanguage = (): JSX.Element => {
         onChange={(e) => handleChange(e)}
       >
         {i18nConfig.locales.map((lng: string) => (
-          <StyledMenuItem data-testid={`language-${lng}`} value={lng} key={lng}>
+          <MenuItem data-testid={`language-${lng}`} value={lng} key={lng}>
             {t(`language-name-${lng}`)}
-          </StyledMenuItem>
+          </MenuItem>
         ))}
       </Select>
     </FormControl>
